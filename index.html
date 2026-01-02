@@ -122,6 +122,15 @@
         .step-card::after { content: ''; position: absolute; top: 32px; right: -16px; width: 32px; height: 2px; background: var(--gold); }
         .step-card:last-child::after { display: none; }
         .step-number { width: 64px; height: 64px; background: var(--forest); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px; font-weight: 700; color: var(--gold); }
+@keyframes stepGlow {
+  0%, 14% { box-shadow: 0 0 30px rgba(201, 162, 39, 0.8); }
+  15%, 100% { box-shadow: none; }
+}
+
+.step-card:nth-child(1) .step-number { animation: stepGlow 7s infinite; animation-delay: 0s; }
+.step-card:nth-child(2) .step-number { animation: stepGlow 7s infinite; animation-delay: 1.25s; }
+.step-card:nth-child(3) .step-number { animation: stepGlow 7s infinite; animation-delay: 2.5s; }
+.step-card:nth-child(4) .step-number { animation: stepGlow 7s infinite; animation-delay: 3.75s; }
         .step-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
         .step-card p { font-size: 14px; color: rgba(255,255,255,0.6); }
 
