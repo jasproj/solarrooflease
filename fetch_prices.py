@@ -15,7 +15,7 @@ API_KEY = os.environ.get("USDA_API_KEY", "")
 
 # Report IDs for chicken/poultry data
 # PY_FG100 = National Weekly Chicken Report (Wholesale Prices)
-CHICKEN_REPORT_ID = "2469"  # Weekly National Chicken Report
+CHICKEN_REPORT_ID = "3646"  # Weekly National Chicken Report
 
 def fetch_chicken_prices():
     """Fetch latest chicken prices from USDA MARS API"""
