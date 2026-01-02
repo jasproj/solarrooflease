@@ -60,8 +60,7 @@
         .hero-badge { display: inline-block; background: rgba(201, 162, 39, 0.15); border: 1px solid var(--gold); color: var(--gold); padding: 6px 14px; border-radius: 4px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
         .hero h1 { font-size: 44px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
         .hero-amount { color: var(--gold); font-size: 46px; font-weight: 800; }
-.hero-today { color: var(--white); font-size: 44px; font-weight: 800; }
-        .hero-upfront { display: block; font-size: 32px; color: rgba(255,255,255,0.9); font-weight: 600; }
+        .hero-today { color: var(--white); font-size: 44px; font-weight: 800; }
         .hero-sub { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 32px; max-width: 480px; }
         .hero-benefits { display: flex; gap: 24px; margin-bottom: 32px; }
         .hero-benefit { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; }
@@ -122,17 +121,17 @@
         .step-card::after { content: ''; position: absolute; top: 32px; right: -16px; width: 32px; height: 2px; background: var(--gold); }
         .step-card:last-child::after { display: none; }
         .step-number { width: 64px; height: 64px; background: var(--forest); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px; font-weight: 700; color: var(--gold); }
-@keyframes stepGlow {
-  0%, 14% { box-shadow: 0 0 30px rgba(201, 162, 39, 0.8); }
-  15%, 100% { box-shadow: none; }
-}
-
-.step-card:nth-child(1) .step-number { animation: stepGlow 7s infinite; animation-delay: 0s; }
-.step-card:nth-child(2) .step-number { animation: stepGlow 7s infinite; animation-delay: 1.25s; }
-.step-card:nth-child(3) .step-number { animation: stepGlow 7s infinite; animation-delay: 2.5s; }
-.step-card:nth-child(4) .step-number { animation: stepGlow 7s infinite; animation-delay: 3.75s; }
         .step-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
         .step-card p { font-size: 14px; color: rgba(255,255,255,0.6); }
+
+        @keyframes stepGlow {
+            0%, 14% { box-shadow: 0 0 30px rgba(201, 162, 39, 0.8); }
+            15%, 100% { box-shadow: none; }
+        }
+        .step-card:nth-child(1) .step-number { animation: stepGlow 7s infinite; animation-delay: 0s; }
+        .step-card:nth-child(2) .step-number { animation: stepGlow 7s infinite; animation-delay: 1.25s; }
+        .step-card:nth-child(3) .step-number { animation: stepGlow 7s infinite; animation-delay: 2.5s; }
+        .step-card:nth-child(4) .step-number { animation: stepGlow 7s infinite; animation-delay: 3.75s; }
 
         .qualify-section { padding: 80px 24px; background: var(--light-gray); }
         .qualify-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
@@ -187,7 +186,8 @@
             .header-cta { display: none; }
             .hero { padding: 48px 20px; }
             .hero h1 { font-size: 32px; }
-            .hero-amount { font-size: 48px; }
+            .hero-amount { font-size: 38px; }
+            .hero-today { font-size: 32px; }
             .hero-benefits { flex-direction: column; gap: 12px; }
             .hero-stats { flex-direction: column; gap: 16px; }
             .stats-grid, .steps-grid, .qualify-grid { grid-template-columns: 1fr; }
@@ -244,7 +244,7 @@
             </div>
             <div class="hero-form-wrap" id="apply">
                 <div class="hero-form-header"><h2>Free Roof Assessment</h2><p>See if your operation qualifies</p></div>
-                <form class="lead-form" id="leadForm">
+                <form class="lead-form" id="leadForm" action="https://formspree.io/f/mzdzrpbb" method="POST">
                     <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="John Miller" required></div>
                     <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(717) 555-1234" required></div>
                     <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="john@example.com"></div>
@@ -364,12 +364,8 @@
         <div class="footer-bottom"><div>© 2025 SolarRoofLease. PA HIC License #113179. All rights reserved.</div><div>Market data from USDA. Prices subject to change.</div></div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
         (function() {
-            const SUPABASE_URL = 'https://uyplndsoqyxaocvuzrre.supabase.co';
-            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV5cGxuZHNvcXl4YW9jdnV6cnJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQ4ODIyNTMsImV4cCI6MjA1MDQ1ODI1M30.CM5M5rUh-ax_oqhBvfvI-cC4wIyD7U6V5j0XCMIX2Ks';
-
             async function loadTicker() {
                 const ticker = document.getElementById('marketTicker');
                 try {
@@ -385,42 +381,16 @@
                     });
                     ticker.innerHTML = html + html;
                 } catch (e) {
-                    ticker.innerHTML = '<div class="ticker-item"><span class="label">Leg Quarters</span><span class="value">$0.48/lb</span></div><div class="ticker-item"><span class="label">Breast B/S</span><span class="value">$1.16/lb</span></div><div class="ticker-item"><span class="label">Wings</span><span class="value">$1.42/lb</span></div><div class="ticker-item"><span class="label">PA SREC</span><span class="value">$35.00</span></div><div class="ticker-item"><span class="label">Leg Quarters</span><span class="value">$0.48/lb</span></div><div class="ticker-item"><span class="label">Breast B/S</span><span class="value">$1.16/lb</span></div><div class="ticker-item"><span class="label">Wings</span><span class="value">$1.42/lb</span></div><div class="ticker-item"><span class="label">PA SREC</span><span class="value">$35.00</span></div>';
+                    ticker.innerHTML = '<div class="ticker-item"><span class="label">Breast B/S</span><span class="value">$1.16/lb</span></div><div class="ticker-item"><span class="label">Leg Quarters</span><span class="value">$0.48/lb</span></div><div class="ticker-item"><span class="label">Wings</span><span class="value">$1.42/lb</span></div><div class="ticker-item"><span class="label">Drumsticks</span><span class="value">$0.54/lb</span></div><div class="ticker-item"><span class="label">Breast B/S</span><span class="value">$1.16/lb</span></div><div class="ticker-item"><span class="label">Leg Quarters</span><span class="value">$0.48/lb</span></div><div class="ticker-item"><span class="label">Wings</span><span class="value">$1.42/lb</span></div><div class="ticker-item"><span class="label">Drumsticks</span><span class="value">$0.54/lb</span></div>';
                 }
             }
 
-            var db = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
             var form = document.getElementById('leadForm');
             var submitBtn = document.getElementById('submitBtn');
-            var successMessage = document.getElementById('successMessage');
 
-            form.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                if (form._gotcha.value) { successMessage.classList.add('show'); form.classList.add('hidden'); return; }
+            form.addEventListener('submit', function() {
                 submitBtn.textContent = 'Submitting...';
                 submitBtn.disabled = true;
-                var leadData = {
-                    name: form.name.value.trim(),
-                    phone: form.phone.value.trim(),
-                    email: form.email.value.trim() || null,
-                    address: form.address.value.trim(),
-                    buildings: form.buildings.value || null,
-                    operation_type: form.operation.value || null,
-                    source: 'landing_page',
-                    utm_source: new URLSearchParams(window.location.search).get('utm_source') || null,
-                    utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || null,
-                    created_at: new Date().toISOString()
-                };
-                try {
-                    var result = await db.from('chicken_farm_leads').insert([leadData]).select();
-                    if (result.error) throw result.error;
-                    successMessage.classList.add('show');
-                    form.classList.add('hidden');
-                } catch (err) {
-                    alert('Something went wrong. Please call us at (717) 768-8500.');
-                    submitBtn.textContent = 'Request Free Assessment';
-                    submitBtn.disabled = false;
-                }
             });
 
             document.getElementById('phone').addEventListener('input', function(e) {
