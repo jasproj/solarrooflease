@@ -517,4 +517,15 @@
                     if (!isActive) {
                         item.classList.add('active');
                         button.setAttribute('aria-expanded', 'true');
-                    } e
+                    } else {
+                        button.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            // Load ticker on page load
+            loadTicker();
+        })();
+    </script>
+</body>
+</html>
