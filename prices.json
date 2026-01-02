@@ -1,0 +1,54 @@
+{
+  "updated": "2026-01-01T22:00:00",
+  "source": "USDA AMS Weekly National Chicken Report",
+  "items": [
+    {
+      "name": "Leg Quarters",
+      "price": "$0.48/lb",
+      "raw_cents": 47.65,
+      "change": "-0.8%"
+    },
+    {
+      "name": "Breast B/S",
+      "price": "$1.16/lb",
+      "raw_cents": 116.42,
+      "change": "+1.6%"
+    },
+    {
+      "name": "Wings",
+      "price": "$1.42/lb",
+      "raw_cents": 142.00,
+      "change": "+2.1%"
+    },
+    {
+      "name": "Drumsticks",
+      "price": "$0.63/lb",
+      "raw_cents": 62.50,
+      "change": "-0.5%"
+    },
+    {
+      "name": "Whole Broiler",
+      "price": "$1.14/lb",
+      "raw_cents": 114.00,
+      "change": "+0.9%"
+    },
+    {
+      "name": "Backs & Necks",
+      "price": "$0.10/lb",
+      "raw_cents": 10.07,
+      "change": "-10.8%"
+    },
+    {
+      "name": "PA SREC",
+      "price": "$35.00",
+      "raw_cents": 3500,
+      "change": "+4.2%"
+    },
+    {
+      "name": "Feed Corn",
+      "price": "$4.52/bu",
+      "raw_cents": 452,
+      "change": "-0.6%"
+    }
+  ]
+}
