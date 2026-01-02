@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Powerstream Solar & Electric | Chicken House Roof Lease</title>
+    <meta name="description" content="Frequently asked questions about leasing your chicken house roof for solar installation. Get $100,000 upfront from Powerstream Solar & Electric.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest: #1a4d2e;
+            --forest-dark: #0f3320;
+            --gold: #c9a227;
+            --gold-light: #dbb94a;
+            --charcoal: #1c1c1c;
+            --slate: #374151;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --green-accent: #22c55e;
+            --red-accent: #ef4444;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--light-gray); color: var(--charcoal); line-height: 1.6; }
+
+        /* Header */
+        .header { background: var(--white); padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
+        .logo { display: flex; align-items: center; }
+        .logo img { height: 50px; width: auto; }
+        .header-contact { display: flex; align-items: center; gap: 24px; }
+        .header-phone { text-align: right; display: none; }
+        .header-phone a { color: var(--charcoal); text-decoration: none; font-weight: 700; font-size: 16px; }
+        .header-phone span { display: block; font-size: 11px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.5px; }
+        .header-cta { background: var(--forest); color: var(--white); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.2s; }
+        .header-cta:hover { background: var(--forest-dark); }
+        @media (min-width: 640px) { .header-phone { display: block; } }
+
+        /* Hero */
+        .faq-hero { background: linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%); color: var(--white); padding: 64px 24px; text-align: center; }
+        .faq-hero h1 { font-size: 40px; font-weight: 800; margin-bottom: 12px; }
+        .faq-hero p { font-size: 18px; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; }
+
+        /* FAQ Content */
+        .faq-content { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+
+        /* Category */
+        .faq-category { margin-bottom: 48px; }
+        .faq-category-title { font-size: 24px; font-weight: 700; color: var(--charcoal); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--gold); }
+
+        /* Accordion */
+        .faq-item { border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; background: var(--white); margin-bottom: 12px; }
+        .faq-question { width: 100%; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; background: var(--white); border: none; cursor: pointer; text-align: left; font-size: 17px; font-weight: 600; color: var(--charcoal); transition: background 0.2s; font-family: inherit; }
+        .faq-question:hover { background: #f9f9f9; }
+        .faq-icon { width: 20px; height: 20px; flex-shrink: 0; transition: transform 0.3s; color: var(--gold); }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s; }
+        .faq-item.active .faq-answer { max-height: 500px; padding: 0 24px 20px; }
+        .faq-answer p { color: var(--slate); line-height: 1.7; margin: 0; }
+
+        /* CTA Section */
+        .cta-section { background: var(--forest); padding: 64px 24px; text-align: center; color: var(--white); }
+        .cta-section h2 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+        .cta-section p { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .cta-btn { padding: 14px 28px; border-radius: 6px; font-size: 16px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .cta-btn.primary { background: var(--gold); color: var(--charcoal); }
+        .cta-btn.primary:hover { background: var(--gold-light); }
+        .cta-btn.secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .cta-btn.secondary:hover { background: var(--white); color: var(--forest); }
+
+        /* Footer */
+        .footer { background: var(--charcoal); padding: 48px 24px 24px; color: rgba(255,255,255,0.7); }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        .footer-brand h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+        .footer-brand p { font-size: 14px; line-height: 1.7; }
+        .footer-col h4 { font-size: 14px; font-weight: 600; color: var(--white); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; font-size: 14px; }
+        .footer-col ul li a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .footer-col ul li a:hover { color: var(--white); }
+        .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 13px; }
+
+        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 640px) {
+            .faq-hero h1 { font-size: 28px; }
+            .faq-hero p { font-size: 16px; }
+            .faq-question { font-size: 15px; padding: 16px 20px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .cta-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">
+            <img src="logo.png" alt="Powerstream Solar & Electric">
+        </a>
+        <div class="header-contact">
+            <div class="header-phone">
+                <a href="tel:7177688500">(717) 768-8500</a>
+                <span>Call for Assessment</span>
+            </div>
+            <a href="/#apply" class="header-cta">Get $100K Quote</a>
+        </div>
+    </header>
+
+    <section class="faq-hero">
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about leasing your chicken house roof for solar</p>
+    </section>
+
+    <main class="faq-content">
+
+        <div class="faq-category">
+            <h2 class="faq-category-title">The Basics</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What's the catch?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No catch. We take all the risk. If panels underperform, that's our problem—you've already been paid. We make money selling electricity to the grid and PA solar credits (SRECs). You make money by leasing us roof space you weren't using anyway.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Why do you pay a lump sum instead of monthly?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Most farmers prefer immediate capital they can use now—pay off debt, invest in the operation, or create a safety net. We have financing partners who prefer long-term assets, so we can offer this upfront structure. It's a win-win.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>How much will I actually receive?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>The $100,000 figure is typical for a standard 4-house broiler operation. Actual payment depends on total roof square footage, roof condition, shading, and grid connection capacity. Some operations receive more; smaller ones may receive less. We'll give you an exact quote after the free assessment.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Is this taxable income?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, the lease payment is considered income. However, consult your accountant—there may be ways to structure this advantageously, especially if you have farm expenses to offset. We're not tax advisors, but we can connect you with agricultural accountants familiar with these arrangements.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h2 class="faq-category-title">Your Property</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What if you damage my roof?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>We take full responsibility. Your roof is professionally inspected before installation. If our system ever causes a leak or damage, we fix it at our expense—guaranteed for the entire lease plus 2 years after removal.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Will the panels affect my chicken operation?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No. The panels sit on top of your existing roof. There's no penetration into the building interior. Your ventilation, lighting, and daily operations continue exactly as before. Many farmers report the panels actually provide slight additional insulation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What about my roof warranty?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>We work with your existing roof warranty and our installation methods are designed to preserve it. If there's any conflict, our roof guarantee covers you for the entire lease term plus 2 years—often better coverage than the original warranty.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Can I sell my farm with panels on it?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. The lease transfers to the new owner automatically. Many buyers see this as a selling point—it's income-producing infrastructure with zero work required.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What if I need to replace my roof during the lease?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>We coordinate and pay for temporary panel removal and reinstallation. You pay for the roof work itself. We schedule around your flock cycles to minimize disruption.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h2 class="faq-category-title">The Lease Terms</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What happens at the end of 15 years?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Three options: (1) We remove the system at our cost and restore your roof, (2) We extend the lease with a new payment, or (3) You purchase the system at fair market value and keep the power.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Can I get out of the lease early?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>The lease includes a buyout provision. After year 5, you can purchase the system at a predetermined declining price. Before year 5, early termination requires repayment of a prorated portion of the upfront payment.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Who owns the electricity the panels produce?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>We do. That's how we make our money—selling electricity to the grid and earning PA Solar Renewable Energy Credits (SRECs). Your payment is for the roof space lease, not the power generation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Will this affect my property taxes?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Pennsylvania law exempts solar equipment from property tax assessment when owned by a third party (us). Your property taxes should not increase due to the solar installation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h2 class="faq-category-title">Risk & Protection</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What if your company goes bankrupt?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Multiple protections: (1) $2M+ insurance policy names you as protected, (2) Removal bond guarantees system cleanup, (3) Our financing partners can step in and continue operations, (4) If truly abandoned, you can keep the system.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What insurance do you carry?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>$2 million general liability, $1 million per occurrence. Your property is named as additionally insured. We also carry workers' comp for installation crews and equipment insurance for the panels themselves.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What if the panels are damaged by a storm?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Our equipment insurance covers panel damage. We repair or replace at our cost. If your roof is damaged, our liability coverage pays for repairs. You're not responsible for any storm damage to the solar equipment.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Do I need to change my farm insurance?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Usually not, but you should notify your insurer about the installation. Most farm policies don't require changes since you don't own the equipment. We provide documentation to share with your insurance agent.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h2 class="faq-category-title">The Process</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>How long does installation take?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Typical installation is 2-4 weeks of active work, scheduled around your flock cycles. From signed contract to operational system is usually 60-90 days, including permits and utility interconnection.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>When do I get paid?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Full payment within 30 days of system commissioning (when the utility approves the grid connection). Some farmers request partial payment at contract signing—we can discuss options.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Who handles permits and utility paperwork?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>We handle everything: building permits, electrical permits, utility interconnection applications, SREC registration. You sign a few authorization forms; we do the rest.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What maintenance is required?</span>
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>None from you. We monitor system performance remotely and handle all maintenance. If something needs attention, we schedule it around your operation. You literally do nothing for 15 years.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <section class="cta-section">
+        <h2>Still Have Questions?</h2>
+        <p>Talk to a real person. No pressure, no salespeople—just straight answers.</p>
+        <div class="cta-buttons">
+            <a href="/#apply" class="cta-btn primary">Request Free Assessment</a>
+            <a href="tel:7177688500" class="cta-btn secondary">Call (717) 768-8500</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 15 years.</p></div>
+            <div class="footer-col"><h4>Service Area</h4><ul><li>Lancaster County</li><li>Chester County</li><li>Berks County</li><li>Lebanon County</li><li>All of Pennsylvania</li></ul></div>
+            <div class="footer-col"><h4>Operations</h4><ul><li>Broiler Houses</li><li>Layer Facilities</li><li>Pullet Houses</li><li>Turkey Barns</li><li>Agricultural Buildings</li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7177688500">(717) 768-8500</a></li><li><a href="mailto:info@solarrooflease.com">info@solarrooflease.com</a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li></ul></div>
+        </div>
+        <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div><a href="/" style="color: rgba(255,255,255,0.7);">Back to Home</a></div></div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var item = button.parentElement;
+                var isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('active'); });
+                if (!isActive) {
+                    item.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                } else {
+                    button.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
