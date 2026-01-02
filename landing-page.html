@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get $100,000 for Your Chicken House Roof | Powerstream Solar</title>
+    <meta name="description" content="We lease your chicken house roof for solar. You get $100,000. Zero cost, zero maintenance. Serving Lancaster, Chester & Berks County farmers.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #f39c12;
+            --gold-dark: #d68910;
+            --navy: #1a252f;
+            --green: #27ae60;
+            --green-dark: #1e8449;
+            --cream: #fdfbf7;
+            --warm-white: #fffef9;
+            --text: #2c3e50;
+            --text-light: #5d6d7e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: var(--navy);
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header-phone {
+            text-align: right;
+        }
+
+        .header-phone a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .header-phone span {
+            display: block;
+            font-size: 0.7rem;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #2c3e50 100%);
+            padding: 2.5rem 1.5rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(39, 174, 96, 0.2);
+            color: var(--green);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(39, 174, 96, 0.3);
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-amount {
+            font-family: 'DM Serif Display', serif;
+            font-size: 4rem;
+            color: var(--gold);
+            display: block;
+            margin: 0.5rem 0;
+            text-shadow: 0 4px 20px rgba(243, 156, 18, 0.3);
+        }
+
+        .hero h2 {
+            font-size: 1.1rem;
+            color: #a0aec0;
+            font-weight: 400;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        /* Benefits */
+        .benefits {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .benefit-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 2rem 1.5rem 3rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-header h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-header p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .lead-form {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 2px solid #e8e8e8;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: var(--warm-white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.15);
+        }
+
+        .form-group input::placeholder {
+            color: #a0aec0;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 0.5rem;
+            font-family: inherit;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.35);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .form-footer svg {
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            background: white;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .trust-badge-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .trust-badge span {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .trust-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 2.5rem 1.5rem;
+            background: var(--cream);
+        }
+
+        .how-it-works h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: var(--gold);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+            color: var(--navy);
+        }
+
+        .step-content p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .step:last-child .step-number {
+            background: var(--green);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-info {
+            font-size: 0.8rem;
+            color: #a0aec0;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-license {
+            font-size: 0.7rem;
+            color: #6b7c8c;
+        }
+
+        /* Success State */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+
+        .success-message h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .success-message p {
+            color: var(--text-light);
+        }
+
+        .lead-form.hidden {
+            display: none;
+        }
+
+        /* Loading state */
+        .submit-btn.loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        /* Error message */
+        .error-message {
+            background: #fee;
+            color: #c00;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        /* Desktop adjustments */
+        @media (min-width: 640px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .hero-amount {
+                font-size: 5rem;
+            }
+            .form-section {
+                padding: 3rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-main">Powerstream</span>
+            <span class="logo-sub">Solar & Electric</span>
+        </div>
+        <div class="header-phone">
+            <a href="tel:7177688500">(717) 768-8500</a>
+            <span>Call or Text</span>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">🐔 Chicken Farmers Only</span>
+            <h1>Get Paid for Your Roof</h1>
+            <span class="hero-amount">$100,000</span>
+            <h2>We lease your chicken house roof. You do nothing. Serving Lancaster, Chester & Berks Counties.</h2>
+            
+            <div class="benefits">
+                <div class="benefit">
+                    <span class="benefit-icon">✓</span>
+                    Zero Cost
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">✓</span>
+                    Zero Liability
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">✓</span>
+                    Zero Maintenance
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="form-header">
+            <h3>Free Roof Assessment</h3>
+            <p>See if your chicken house qualifies for $100,000</p>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <form class="lead-form" id="leadForm">
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" placeholder="John Miller" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="(717) 555-1234" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email (Optional)</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Property Address *</label>
+                <input type="text" id="address" name="address" placeholder="123 Farm Road, Lancaster, PA" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="roof_size">Roof Size (est.)</label>
+                    <select id="roof_size" name="roof_size">
+                        <option value="">Select...</option>
+                        <option value="10k-20k">10,000 - 20,000 sq ft</option>
+                        <option value="20k-40k">20,000 - 40,000 sq ft</option>
+                        <option value="40k+">40,000+ sq ft</option>
+                        <option value="not-sure">Not Sure</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="buildings">Buildings</label>
+                    <select id="buildings" name="buildings">
+                        <option value="">Select...</option>
+                        <option value="1">1 building</option>
+                        <option value="2">2 buildings</option>
+                        <option value="3">3 buildings</option>
+                        <option value="4+">4+ buildings</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Honeypot spam protection -->
+            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                Get My Free Assessment →
+            </button>
+
+            <div class="form-footer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                Your info is secure & never shared
+            </div>
+        </form>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-icon">✓</div>
+            <h3>You're On the List!</h3>
+            <p>We'll call you within 24 hours to schedule your free roof assessment.</p>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <span class="trust-badge-icon">🏠</span>
+                <span>PA Licensed</span>
+            </div>
+            <div class="trust-badge">
+                <span class="trust-badge-icon">🛡️</span>
+                <span>Fully Insured</span>
+            </div>
+            <div class="trust-badge">
+                <span class="trust-badge-icon">👨‍👩‍👧‍👦</span>
+                <span>Family Owned</span>
+            </div>
+        </div>
+        <p class="trust-text">
+            Powerstream Solar has been serving Pennsylvania farmers since 2003. PA HIC License #113179.
+        </p>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h3>How It Works</h3>
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-content">
+                    <h4>Free Assessment</h4>
+                    <p>We evaluate your roof size, condition, and sun exposure</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-content">
+                    <h4>Sign the Lease</h4>
+                    <p>Simple agreement – we handle all permits and paperwork</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-content">
+                    <h4>We Install</h4>
+                    <p>Professional installation at zero cost to you</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">4</span>
+                <div class="step-content">
+                    <h4>Get Paid $100,000</h4>
+                    <p>Payment within 30 days of system going live</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">Powerstream Solar & Electric</div>
+        <div class="footer-info">5808 Northeimer Rd, Narvon, PA 17555</div>
+        <div class="footer-info">(717) 768-8500 • info@powerstreamelectric.com</div>
+        <div class="footer-license">PA HIC License #113179 • © 2025 All Rights Reserved</div>
+    </footer>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script>
+        // ===========================================
+        // CONFIGURATION - UPDATE THESE VALUES
+        // ===========================================
+        const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';  // e.g., 'https://xxxxx.supabase.co'
+        const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+        
+        // Optional: Email notification webhook (Zapier, Make, etc.)
+        const NOTIFICATION_WEBHOOK = '';  // Leave empty to disable
+        // ===========================================
+
+        // Initialize Supabase
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // Form handling
+        const form = document.getElementById('leadForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Check honeypot
+            if (form._gotcha.value) {
+                // Bot detected, silently fail
+                successMessage.classList.add('show');
+                form.classList.add('hidden');
+                return;
+            }
+
+            // Show loading state
+            submitBtn.classList.add('loading');
+            submitBtn.textContent = 'Submitting...';
+            errorMessage.classList.remove('show');
+
+            // Gather form data
+            const leadData = {
+                name: form.name.value.trim(),
+                phone: form.phone.value.trim(),
+                email: form.email.value.trim() || null,
+                address: form.address.value.trim(),
+                roof_size: form.roof_size.value || null,
+                buildings: form.buildings.value || null,
+                source: 'landing_page',
+                utm_source: new URLSearchParams(window.location.search).get('utm_source') || null,
+                utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || null,
+                created_at: new Date().toISOString()
+            };
+
+            try {
+                // Insert into Supabase
+                const { data, error } = await supabase
+                    .from('chicken_farm_leads')
+                    .insert([leadData])
+                    .select();
+
+                if (error) throw error;
+
+                // Optional: Send notification webhook
+                if (NOTIFICATION_WEBHOOK) {
+                    fetch(NOTIFICATION_WEBHOOK, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(leadData)
+                    }).catch(() => {}); // Silent fail for webhook
+                }
+
+                // Show success
+                successMessage.classList.add('show');
+                form.classList.add('hidden');
+
+            } catch (err) {
+                console.error('Error:', err);
+                errorMessage.textContent = 'Something went wrong. Please call us at (717) 768-8500.';
+                errorMessage.classList.add('show');
+                submitBtn.classList.remove('loading');
+                submitBtn.textContent = 'Get My Free Assessment →';
+            }
+        });
+
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 6) {
+                value = '(' + value.slice(0,3) + ') ' + value.slice(3,6) + '-' + value.slice(6,10);
+            } else if (value.length >= 3) {
+                value = '(' + value.slice(0,3) + ') ' + value.slice(3);
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
