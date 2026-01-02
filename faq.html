@@ -90,6 +90,15 @@
             .cta-buttons { flex-direction: column; }
         }
     </style>
+    
+    <!-- Google Analytics - Replace G-XXXXXXXXXX with your GA4 ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
     <header class="header">
@@ -355,28 +364,19 @@
 
     <footer class="footer">
         <div class="footer-grid">
-            <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 15 years.</p></div>
+            <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 15 years.</p><img src="logo.png" alt="Powerstream Solar & Electric" style="height: 45px; margin-top: 16px; filter: brightness(0) invert(1); opacity: 0.8;"></div>
             <div class="footer-col"><h4>Service Area</h4><ul><li>Lancaster County</li><li>Chester County</li><li>Berks County</li><li>Lebanon County</li><li>All of Pennsylvania</li></ul></div>
             <div class="footer-col"><h4>Operations</h4><ul><li>Broiler Houses</li><li>Layer Facilities</li><li>Pullet Houses</li><li>Turkey Barns</li><li>Agricultural Buildings</li></ul></div>
-            <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7177688500">(717) 768-8500</a></li><li><a href="mailto:info@solarrooflease.com">info@solarrooflease.com</a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7177688500">(717) 768-8500</a></li><li><a href="/cdn-cgi/l/email-protection#0e676068614e7d61626f7c7c616168626b6f7d6b206d6163"><span class="__cf_email__" data-cfemail="422b2c242d02312d2e2330302d2d242e272331276c212d2f">[email&#160;protected]</span></a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li></ul></div>
         </div>
-        <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div><a href="/" style="color: rgba(255,255,255,0.7);">Back to Home</a></div></div>
+        <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div style="display: flex; gap: 16px;"><a href="/" style="color: rgba(255,255,255,0.7);">Back to Home</a><span style="color: rgba(255,255,255,0.5);">Site by <span style="color: #c9a227;">OG71</span></span></div></div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         document.querySelectorAll('.faq-question').forEach(function(button) {
             button.addEventListener('click', function() {
                 var item = button.parentElement;
                 var isActive = item.classList.contains('active');
                 document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('active'); });
                 if (!isActive) {
-                    item.classList.add('active');
-                    button.setAttribute('aria-expanded', 'true');
-                } else {
-                    button.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                    item.classLis
