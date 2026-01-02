@@ -24,6 +24,7 @@ def fetch_prices():
         response = requests.get(API_URL, auth=(API_KEY, ''))
         response.raise_for_status()
         data = response.json()
+        print("RAW RESPONSE:", json.dumps(data, indent=2)[:3000])
         
         items = []
         
