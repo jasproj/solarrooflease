@@ -259,6 +259,12 @@
                         <div class="form-group"><label for="operation">Operation Type</label><select id="operation" name="operation"><option value="">Select...</option><option value="broiler">Broiler</option><option value="layer">Layer/Egg</option><option value="pullet">Pullet</option><option value="turkey">Turkey</option><option value="other">Other</option></select></div>
                     </div>
                     <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="utm_source" id="utm_source">
+                    <input type="hidden" name="utm_medium" id="utm_medium">
+                    <input type="hidden" name="utm_campaign" id="utm_campaign">
+                    <input type="hidden" name="referrer" id="referrer">
+                    <input type="hidden" name="landing_page" id="landing_page">
+                    <input type="hidden" name="lead_source" value="solarrooflease.com">
                     <button type="submit" class="submit-btn" id="submitBtn">Request Free Assessment</button>
                     <div class="form-footer">No obligation • Response within 24 hours</div>
                 </form>
@@ -420,16 +426,33 @@
 
     <footer class="footer">
         <div class="footer-grid">
-            <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 15 years.</p></div>
+            <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 15 years.</p><img src="logo.png" alt="Powerstream Solar & Electric" style="height: 45px; margin-top: 16px; filter: brightness(0) invert(1); opacity: 0.8;"></div>
             <div class="footer-col"><h4>Service Area</h4><ul><li>Lancaster County</li><li>Chester County</li><li>Berks County</li><li>Lebanon County</li><li>All of Pennsylvania</li></ul></div>
             <div class="footer-col"><h4>Operations</h4><ul><li>Broiler Houses</li><li>Layer Facilities</li><li>Pullet Houses</li><li>Turkey Barns</li><li>Agricultural Buildings</li></ul></div>
-            <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7177688500">(717) 768-8500</a></li><li><a href="mailto:info@solarrooflease.com">info@solarrooflease.com</a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7177688500">(717) 768-8500</a></li><li><a href="/cdn-cgi/l/email-protection#2e474048416e5d41424f5c5c414148424b4f5d4b004d4143"><span class="__cf_email__" data-cfemail="93fafdf5fcd3e0fcfff2e1e1fcfcf5fff6f2e0f6bdf0fcfe">[email&#160;protected]</span></a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li></ul></div>
         </div>
-        <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div>Market data from USDA. Prices subject to change.</div></div>
+        <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div style="display: flex; gap: 16px;"><span>Market data from USDA</span><span>Site by <a href="#" style="color: var(--gold);">OG71</a></span></div></div>
     </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><!-- Google Analytics - Replace G-XXXXXXXXXX with your GA4 ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 
     <script>
         (function() {
+            // Populate tracking fields
+            var params = new URLSearchParams(window.location.search);
+            document.getElementById('utm_source').value = params.get('utm_source') || '';
+            document.getElementById('utm_medium').value = params.get('utm_medium') || '';
+            document.getElementById('utm_campaign').value = params.get('utm_campaign') || '';
+            document.getElementById('referrer').value = document.referrer || 'direct';
+            document.getElementById('landing_page').value = window.location.href;
+
             async function loadTicker() {
                 const ticker = document.getElementById('marketTicker');
                 try {
@@ -455,6 +478,13 @@
             form.addEventListener('submit', function() {
                 submitBtn.textContent = 'Submitting...';
                 submitBtn.disabled = true;
+                // Track form submission in GA
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'form',
+                        'event_label': 'roof_assessment'
+                    });
+                }
             });
 
             document.getElementById('phone').addEventListener('input', function(e) {
@@ -481,14 +511,4 @@
                     if (!isActive) {
                         item.classList.add('active');
                         button.setAttribute('aria-expanded', 'true');
-                    } else {
-                        button.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            });
-
-            document.addEventListener('DOMContentLoaded', loadTicker);
-        })();
-    </script>
-</body>
-</html>
+                    } e
