@@ -14,8 +14,6 @@ jobs:
     
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -32,7 +30,6 @@ jobs:
         run: |
           git config user.email "bot@github.com"
           git config user.name "github-actions"
-          git pull origin main --no-rebase
           git add prices.json
-          git diff --staged --quiet || git commit -m "Update prices"
-          git push
+          git commit -m "Update prices" || echo "No changes"
+          git push origin main --force
