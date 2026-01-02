@@ -38,14 +38,9 @@
         .ticker-item .change.down { background: rgba(239, 68, 68, 0.2); color: #f87171; }
         .ticker-item .change.neutral { background: rgba(255, 255, 255, 0.1); color: #888; }
 
-        .header { background: var(--white); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
-        .logo { display: flex; align-items: center; gap: 12px; }
-        .logo-text-wrap { display: flex; flex-direction: column; }
-        .logo-icon { width: 40px; height: 40px; background: var(--forest); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-        .logo-icon svg { width: 24px; height: 24px; fill: var(--gold); }
-        .logo-text { font-weight: 700; font-size: 18px; color: var(--charcoal); }
-        .logo-text span { color: var(--forest); }
-        .logo-tagline { font-size: 11px; color: var(--slate); letter-spacing: 0.3px; margin-top: 2px; }
+        .header { background: var(--white); padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
+        .logo { display: flex; align-items: center; }
+        .logo img { height: 50px; width: auto; }
         .header-contact { display: flex; align-items: center; gap: 24px; }
         .header-phone { text-align: right; }
         .header-phone a { color: var(--charcoal); text-decoration: none; font-weight: 700; font-size: 16px; }
@@ -223,15 +218,9 @@
     </div>
 
     <header class="header">
-        <div class="logo">
-            <div class="logo-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v9h14v-9h3L12 3zm0 12.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            </div>
-            <div class="logo-text-wrap">
-                <div class="logo-text">Powerstream <span>Solar & Electric</span></div>
-                <div class="logo-tagline">A new way to profit from your rooftop</div>
-            </div>
-        </div>
+        <a href="/" class="logo">
+            <img src="logo.png" alt="Powerstream Solar & Electric">
+        </a>
         <div class="header-contact">
             <div class="header-phone">
                 <a href="tel:7177688500">(717) 768-8500</a>
