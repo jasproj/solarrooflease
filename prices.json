@@ -1,12 +1,32 @@
 {
-  "updated": "2026-01-02T04:17:37.703865",
+  "updated": "2026-01-02T04:42:39",
   "source": "USDA AMS Weekly National Chicken Report",
+  "report_id": "3646",
   "items": [
     {
-      "name": "PA SREC",
-      "price": "$35.00",
-      "raw_cents": 3500,
-      "note": "Pennsylvania Solar Renewable Energy Credit"
+      "name": "Whole Broiler",
+      "price": "$1.14/lb",
+      "raw_cents": 114.0
+    },
+    {
+      "name": "Breast B/S",
+      "price": "$1.16/lb",
+      "raw_cents": 116.0
+    },
+    {
+      "name": "Leg Quarters",
+      "price": "$0.48/lb",
+      "raw_cents": 48.0
+    },
+    {
+      "name": "Wings",
+      "price": "$1.42/lb",
+      "raw_cents": 142.0
+    },
+    {
+      "name": "Drumsticks",
+      "price": "$0.63/lb",
+      "raw_cents": 63.0
     }
   ]
 }
