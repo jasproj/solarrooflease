@@ -963,90 +963,10 @@
     </style>
 </head>
 <body>
-    <!-- Market Ticker -->
+    <!-- Market Ticker (Loads live data from prices.json) -->
     <div class="ticker-wrap">
         <div class="ticker" id="marketTicker">
-            <div class="ticker-item">
-                <span class="label">Whole Chicken (Retail)</span>
-                <span class="value">$1.92/lb</span>
-                <span class="change up">+2.1%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Broiler Composite</span>
-                <span class="value">$1.14/lb</span>
-                <span class="change up">+0.8%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Boneless Breast</span>
-                <span class="value">$3.42/lb</span>
-                <span class="change down">-1.2%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Leg Quarters</span>
-                <span class="value">$0.48/lb</span>
-                <span class="change neutral">0.0%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Wings</span>
-                <span class="value">$2.18/lb</span>
-                <span class="change up">+3.4%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">PA SREC</span>
-                <span class="value">$35.00</span>
-                <span class="change up">+4.2%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Feed Corn</span>
-                <span class="value">$4.52/bu</span>
-                <span class="change down">-0.6%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Soybean Meal</span>
-                <span class="value">$298/ton</span>
-                <span class="change up">+1.1%</span>
-            </div>
-            <!-- Duplicate for seamless loop -->
-            <div class="ticker-item">
-                <span class="label">Whole Chicken (Retail)</span>
-                <span class="value">$1.92/lb</span>
-                <span class="change up">+2.1%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Broiler Composite</span>
-                <span class="value">$1.14/lb</span>
-                <span class="change up">+0.8%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Boneless Breast</span>
-                <span class="value">$3.42/lb</span>
-                <span class="change down">-1.2%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Leg Quarters</span>
-                <span class="value">$0.48/lb</span>
-                <span class="change neutral">0.0%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Wings</span>
-                <span class="value">$2.18/lb</span>
-                <span class="change up">+3.4%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">PA SREC</span>
-                <span class="value">$35.00</span>
-                <span class="change up">+4.2%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Feed Corn</span>
-                <span class="value">$4.52/bu</span>
-                <span class="change down">-0.6%</span>
-            </div>
-            <div class="ticker-item">
-                <span class="label">Soybean Meal</span>
-                <span class="value">$298/ton</span>
-                <span class="change up">+1.1%</span>
-            </div>
+            <div class="ticker-item"><span class="label">Loading market data...</span></div>
         </div>
     </div>
 
@@ -1451,7 +1371,7 @@
                 <h4>Contact</h4>
                 <ul>
                     <li><a href="tel:7177688500">(717) 768-8500</a></li>
-                    <li><a href="mailto:info@solarrooflease.com">info@solarrooflease.com</a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#f891969e97b88b9794998a8a97979e949d998b9dd69b9795"><span class="__cf_email__" data-cfemail="c8a1a6aea788bba7a4a9babaa7a7aea4ada9bbade6aba7a5">[email&#160;protected]</span></a></li>
                     <li>Narvon, PA 17555</li>
                 </ul>
             </div>
@@ -1469,11 +1389,56 @@
         // ===========================================
         // CONFIGURATION - UPDATE THESE VALUES
         // ===========================================
-        const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
-        const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+        const SUPABASE_URL = 'https://uyplndsoqyxaocvuzrre.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV5cGxuZHNvcXl4YW9jdnV6cnJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQ4ODIyNTMsImV4cCI6MjA1MDQ1ODI1M30.CM5M5rUh-ax_oqhBvfvI-cC4wIyD7U6V5j0XCMIX2Ks';
         const NOTIFICATION_WEBHOOK = '';
         // ===========================================
 
+        // Load live prices from USDA data (prices.json)
+        async function loadTicker() {
+            const ticker = document.getElementById('marketTicker');
+            try {
+                const response = await fetch('prices.json');
+                const data = await response.json();
+                
+                let html = '';
+                data.items.forEach(item => {
+                    const change = item.change || '';
+                    let changeClass = 'neutral';
+                    if (change.startsWith('+')) changeClass = 'up';
+                    if (change.startsWith('-')) changeClass = 'down';
+                    
+                    html += `
+                        <div class="ticker-item">
+                            <span class="label">${item.name}</span>
+                            <span class="value">${item.price}</span>
+                            ${change ? `<span class="change ${changeClass}">${change}</span>` : ''}
+                        </div>
+                    `;
+                });
+                
+                // Duplicate for seamless loop
+                ticker.innerHTML = html + html;
+                
+            } catch (error) {
+                console.error('Failed to load prices:', error);
+                // Fallback display
+                ticker.innerHTML = `
+                    <div class="ticker-item"><span class="label">Leg Quarters</span><span class="value">$0.48/lb</span></div>
+                    <div class="ticker-item"><span class="label">Breast B/S</span><span class="value">$1.16/lb</span></div>
+                    <div class="ticker-item"><span class="label">Wings</span><span class="value">$1.42/lb</span></div>
+                    <div class="ticker-item"><span class="label">PA SREC</span><span class="value">$35.00</span></div>
+                    <div class="ticker-item"><span class="label">Leg Quarters</span><span class="value">$0.48/lb</span></div>
+                    <div class="ticker-item"><span class="label">Breast B/S</span><span class="value">$1.16/lb</span></div>
+                    <div class="ticker-item"><span class="label">Wings</span><span class="value">$1.42/lb</span></div>
+                    <div class="ticker-item"><span class="label">PA SREC</span><span class="value">$35.00</span></div>
+                `;
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', loadTicker);
+
+        // Form handling
         const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
         const form = document.getElementById('leadForm');
