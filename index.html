@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get $100,000 for Your Chicken House Roof | Powerstream Solar</title>
-    <meta name="description" content="We lease your chicken house roof for solar. You get $100,000. Zero cost, zero maintenance. Serving Lancaster, Chester & Berks County farmers.">
+    <title>Solar Roof Lease for Poultry Operations | $100,000 Upfront</title>
+    <meta name="description" content="Monetize your chicken house rooftop. $100,000 lump sum payment. Zero cost, zero risk. Serving Pennsylvania poultry operations.">
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --gold: #f39c12;
-            --gold-dark: #d68910;
-            --navy: #1a252f;
-            --green: #27ae60;
-            --green-dark: #1e8449;
-            --cream: #fdfbf7;
-            --warm-white: #fffef9;
-            --text: #2c3e50;
-            --text-light: #5d6d7e;
+            --forest: #1a4d2e;
+            --forest-dark: #0f3320;
+            --gold: #c9a227;
+            --gold-light: #dbb94a;
+            --charcoal: #1c1c1c;
+            --slate: #374151;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --green-accent: #22c55e;
+            --red-accent: #ef4444;
         }
 
         * {
@@ -31,39 +31,136 @@
         }
 
         body {
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--cream);
-            color: var(--text);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--charcoal);
             line-height: 1.6;
-            min-height: 100vh;
+        }
+
+        /* Market Ticker */
+        .ticker-wrap {
+            background: var(--charcoal);
+            padding: 8px 0;
+            overflow: hidden;
+            border-bottom: 1px solid #333;
+        }
+
+        .ticker {
+            display: flex;
+            animation: ticker 45s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 32px;
+            font-size: 13px;
+            color: #a0a0a0;
+        }
+
+        .ticker-item .label {
+            margin-right: 8px;
+            color: #888;
+        }
+
+        .ticker-item .value {
+            font-weight: 600;
+            color: var(--white);
+            margin-right: 6px;
+        }
+
+        .ticker-item .change {
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .ticker-item .change.up {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        .ticker-item .change.down {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+
+        .ticker-item .change.neutral {
+            background: rgba(255, 255, 255, 0.1);
+            color: #888;
         }
 
         /* Header */
         .header {
-            background: var(--navy);
-            padding: 1rem 1.5rem;
+            background: var(--white);
+            padding: 16px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
             display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-text-wrap {
+            display: flex;
             flex-direction: column;
         }
 
-        .logo-main {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            color: var(--gold);
-            letter-spacing: 0.5px;
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--forest);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .logo-sub {
-            font-size: 0.75rem;
-            color: #a0aec0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .logo-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gold);
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--charcoal);
+        }
+
+        .logo-text span {
+            color: var(--forest);
+        }
+
+        .logo-tagline {
+            font-size: 11px;
+            color: var(--slate);
+            letter-spacing: 0.3px;
+            margin-top: 2px;
+        }
+
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 24px;
         }
 
         .header-phone {
@@ -71,25 +168,39 @@
         }
 
         .header-phone a {
-            color: white;
+            color: var(--charcoal);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 700;
+            font-size: 16px;
         }
 
         .header-phone span {
             display: block;
-            font-size: 0.7rem;
-            color: #a0aec0;
+            font-size: 11px;
+            color: var(--slate);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+        }
+
+        .header-cta {
+            background: var(--forest);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .header-cta:hover {
+            background: var(--forest-dark);
         }
 
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, var(--navy) 0%, #2c3e50 100%);
-            padding: 2.5rem 1.5rem 3rem;
-            text-align: center;
+            background: linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%);
+            padding: 80px 24px;
             position: relative;
             overflow: hidden;
         }
@@ -102,330 +213,624 @@
             right: 0;
             bottom: 0;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
         }
 
         .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
             position: relative;
             z-index: 1;
         }
 
-        .hero-tag {
+        .hero-text {
+            color: var(--white);
+        }
+
+        .hero-badge {
             display: inline-block;
-            background: rgba(39, 174, 96, 0.2);
-            color: var(--green);
-            padding: 0.4rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
+            background: rgba(201, 162, 39, 0.15);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 12px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.2rem;
-            color: white;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
         }
 
         .hero-amount {
-            font-family: 'DM Serif Display', serif;
-            font-size: 4rem;
-            color: var(--gold);
             display: block;
-            margin: 0.5rem 0;
-            text-shadow: 0 4px 20px rgba(243, 156, 18, 0.3);
+            color: var(--gold);
+            font-size: 64px;
         }
 
-        .hero h2 {
-            font-size: 1.1rem;
-            color: #a0aec0;
-            font-weight: 400;
-            max-width: 320px;
-            margin: 0 auto;
+        .hero-sub {
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 32px;
+            max-width: 480px;
         }
 
-        /* Benefits */
-        .benefits {
+        .hero-benefits {
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 32px;
         }
 
-        .benefit {
+        .hero-benefit {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            color: white;
-            font-size: 0.9rem;
+            gap: 8px;
+            font-size: 14px;
             font-weight: 500;
         }
 
-        .benefit-icon {
-            width: 24px;
-            height: 24px;
-            background: var(--green);
-            border-radius: 50%;
+        .hero-benefit svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--green-accent);
+        }
+
+        .hero-stats {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
+            gap: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.15);
         }
 
-        /* Form Section */
-        .form-section {
-            padding: 2rem 1.5rem 3rem;
-            max-width: 500px;
-            margin: 0 auto;
+        .hero-stat {
+            text-align: left;
         }
 
-        .form-header {
+        .hero-stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .hero-stat-label {
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Hero Form */
+        .hero-form-wrap {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        }
+
+        .hero-form-header {
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 24px;
         }
 
-        .form-header h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            color: var(--navy);
-            margin-bottom: 0.5rem;
+        .hero-form-header h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 4px;
         }
 
-        .form-header p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        .lead-form {
-            background: white;
-            border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            border: 1px solid rgba(0,0,0,0.05);
+        .hero-form-header p {
+            font-size: 14px;
+            color: var(--slate);
         }
 
         .form-group {
-            margin-bottom: 1rem;
+            margin-bottom: 16px;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.85rem;
+            font-size: 13px;
             font-weight: 600;
-            color: var(--text);
-            margin-bottom: 0.4rem;
+            color: var(--charcoal);
+            margin-bottom: 6px;
         }
 
         .form-group input,
         .form-group select {
             width: 100%;
-            padding: 0.9rem 1rem;
-            border: 2px solid #e8e8e8;
-            border-radius: 10px;
-            font-size: 1rem;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 15px;
             font-family: inherit;
             transition: border-color 0.2s, box-shadow 0.2s;
-            background: var(--warm-white);
+            background: var(--white);
         }
 
         .form-group input:focus,
         .form-group select:focus {
             outline: none;
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.15);
-        }
-
-        .form-group input::placeholder {
-            color: #a0aec0;
+            border-color: var(--forest);
+            box-shadow: 0 0 0 3px rgba(26, 77, 46, 0.1);
         }
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            gap: 12px;
         }
 
         .submit-btn {
             width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
-            color: white;
+            padding: 14px;
+            background: var(--forest);
+            color: var(--white);
             border: none;
-            border-radius: 10px;
-            font-size: 1.1rem;
+            border-radius: 6px;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            margin-top: 0.5rem;
+            transition: background 0.2s;
             font-family: inherit;
         }
 
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.35);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
+            background: var(--forest-dark);
         }
 
         .form-footer {
             text-align: center;
-            margin-top: 1rem;
-            font-size: 0.8rem;
-            color: var(--text-light);
+            margin-top: 16px;
+            font-size: 12px;
+            color: var(--slate);
         }
 
-        .form-footer svg {
-            width: 14px;
-            height: 14px;
-            vertical-align: middle;
-            margin-right: 4px;
+        /* Industry Stats Section */
+        .industry-stats {
+            background: var(--light-gray);
+            padding: 60px 24px;
         }
 
-        /* Trust Section */
-        .trust-section {
-            background: white;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            border-top: 1px solid #eee;
-        }
-
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 1.5rem;
-        }
-
-        .trust-badge {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .trust-badge-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--cream);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-        }
-
-        .trust-badge span {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        .trust-text {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            max-width: 300px;
+        .section-container {
+            max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: var(--slate);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+
+        .stat-card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(26, 77, 46, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        .stat-card-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--forest);
+        }
+
+        .stat-card-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 4px;
+        }
+
+        .stat-card-label {
+            font-size: 13px;
+            color: var(--slate);
+        }
+
+        /* Why Section */
+        .why-section {
+            padding: 80px 24px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .why-content h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+
+        .why-content p {
+            font-size: 16px;
+            color: var(--slate);
+            margin-bottom: 24px;
+        }
+
+        .why-list {
+            list-style: none;
+        }
+
+        .why-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: var(--charcoal);
+        }
+
+        .why-list li svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--green-accent);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .comparison-table {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+        }
+
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: var(--forest);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .comparison-header > div {
+            padding: 16px 20px;
+            text-align: center;
+        }
+
+        .comparison-header > div:first-child {
+            text-align: left;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-row > div {
+            padding: 14px 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .comparison-row > div:first-child {
+            text-align: left;
+            font-weight: 500;
+            color: var(--charcoal);
+        }
+
+        .comparison-row .highlight {
+            background: rgba(26, 77, 46, 0.05);
+            color: var(--forest);
+            font-weight: 600;
+        }
+
+        .comparison-row .dim {
+            color: var(--slate);
         }
 
         /* How It Works */
-        .how-it-works {
-            padding: 2.5rem 1.5rem;
-            background: var(--cream);
+        .how-section {
+            background: var(--charcoal);
+            padding: 80px 24px;
+            color: var(--white);
         }
 
-        .how-it-works h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
+        .how-section .section-header h2 {
+            color: var(--white);
+        }
+
+        .how-section .section-header p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .step-card {
             text-align: center;
-            margin-bottom: 1.5rem;
-            color: var(--navy);
+            position: relative;
         }
 
-        .steps {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-width: 400px;
-            margin: 0 auto;
+        .step-card::after {
+            content: '';
+            position: absolute;
+            top: 32px;
+            right: -16px;
+            width: 32px;
+            height: 2px;
+            background: var(--gold);
         }
 
-        .step {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            background: white;
-            padding: 1rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        .step-card:last-child::after {
+            display: none;
         }
 
         .step-number {
-            width: 32px;
-            height: 32px;
-            background: var(--gold);
-            color: white;
+            width: 64px;
+            height: 64px;
+            background: var(--forest);
+            border: 2px solid var(--gold);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
             font-weight: 700;
+            color: var(--gold);
+        }
+
+        .step-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Qualifications */
+        .qualify-section {
+            padding: 80px 24px;
+            background: var(--light-gray);
+        }
+
+        .qualify-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .qualify-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .qualify-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--charcoal);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .qualify-card h3 svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .qualify-list {
+            list-style: none;
+        }
+
+        .qualify-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+            font-size: 15px;
+        }
+
+        .qualify-list li:last-child {
+            border-bottom: none;
+        }
+
+        .qualify-list li svg {
+            width: 18px;
+            height: 18px;
             flex-shrink: 0;
         }
 
-        .step-content h4 {
-            font-size: 1rem;
-            margin-bottom: 0.2rem;
-            color: var(--navy);
+        .qualify-list.yes svg {
+            fill: var(--green-accent);
         }
 
-        .step-content p {
-            font-size: 0.85rem;
-            color: var(--text-light);
+        .qualify-list.no svg {
+            fill: var(--red-accent);
         }
 
-        .step:last-child .step-number {
-            background: var(--green);
+        /* CTA Section */
+        .cta-section {
+            background: var(--forest);
+            padding: 80px 24px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .cta-btn {
+            padding: 16px 32px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .cta-btn.primary {
+            background: var(--gold);
+            color: var(--charcoal);
+        }
+
+        .cta-btn.primary:hover {
+            background: var(--gold-light);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .cta-btn.secondary:hover {
+            background: var(--white);
+            color: var(--forest);
         }
 
         /* Footer */
         .footer {
-            background: var(--navy);
-            padding: 1.5rem;
-            text-align: center;
+            background: var(--charcoal);
+            padding: 48px 24px 24px;
+            color: rgba(255,255,255,0.7);
         }
 
-        .footer-logo {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.2rem;
-            color: var(--gold);
-            margin-bottom: 0.5rem;
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
         }
 
-        .footer-info {
-            font-size: 0.8rem;
-            color: #a0aec0;
-            margin-bottom: 0.3rem;
+        .footer-brand h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
         }
 
-        .footer-license {
-            font-size: 0.7rem;
-            color: #6b7c8c;
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
         }
 
         /* Success State */
         .success-message {
             display: none;
             text-align: center;
-            padding: 2rem;
+            padding: 40px 20px;
         }
 
         .success-message.show {
@@ -435,238 +840,626 @@
         .success-icon {
             width: 64px;
             height: 64px;
-            background: var(--green);
+            background: var(--green-accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 2rem;
+            margin: 0 auto 16px;
+        }
+
+        .success-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--white);
         }
 
         .success-message h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            color: var(--navy);
-            margin-bottom: 0.5rem;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 8px;
         }
 
         .success-message p {
-            color: var(--text-light);
+            color: var(--slate);
         }
 
         .lead-form.hidden {
             display: none;
         }
 
-        /* Loading state */
-        .submit-btn.loading {
-            opacity: 0.7;
-            pointer-events: none;
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .step-card::after {
+                display: none;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
-        /* Error message */
-        .error-message {
-            background: #fee;
-            color: #c00;
-            padding: 0.75rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            display: none;
-        }
+        @media (max-width: 640px) {
+            .header-cta {
+                display: none;
+            }
 
-        .error-message.show {
-            display: block;
-        }
+            .hero {
+                padding: 48px 20px;
+            }
 
-        /* Desktop adjustments */
-        @media (min-width: 640px) {
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 32px;
             }
+
             .hero-amount {
-                font-size: 5rem;
+                font-size: 48px;
             }
-            .form-section {
-                padding: 3rem 2rem;
+
+            .hero-benefits {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .qualify-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .comparison-header,
+            .comparison-row {
+                font-size: 12px;
+            }
+
+            .comparison-header > div,
+            .comparison-row > div {
+                padding: 10px 8px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Market Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker" id="marketTicker">
+            <div class="ticker-item">
+                <span class="label">Whole Chicken (Retail)</span>
+                <span class="value">$1.92/lb</span>
+                <span class="change up">+2.1%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Broiler Composite</span>
+                <span class="value">$1.14/lb</span>
+                <span class="change up">+0.8%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Boneless Breast</span>
+                <span class="value">$3.42/lb</span>
+                <span class="change down">-1.2%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Leg Quarters</span>
+                <span class="value">$0.48/lb</span>
+                <span class="change neutral">0.0%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Wings</span>
+                <span class="value">$2.18/lb</span>
+                <span class="change up">+3.4%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">PA SREC</span>
+                <span class="value">$35.00</span>
+                <span class="change up">+4.2%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Feed Corn</span>
+                <span class="value">$4.52/bu</span>
+                <span class="change down">-0.6%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Soybean Meal</span>
+                <span class="value">$298/ton</span>
+                <span class="change up">+1.1%</span>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="ticker-item">
+                <span class="label">Whole Chicken (Retail)</span>
+                <span class="value">$1.92/lb</span>
+                <span class="change up">+2.1%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Broiler Composite</span>
+                <span class="value">$1.14/lb</span>
+                <span class="change up">+0.8%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Boneless Breast</span>
+                <span class="value">$3.42/lb</span>
+                <span class="change down">-1.2%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Leg Quarters</span>
+                <span class="value">$0.48/lb</span>
+                <span class="change neutral">0.0%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Wings</span>
+                <span class="value">$2.18/lb</span>
+                <span class="change up">+3.4%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">PA SREC</span>
+                <span class="value">$35.00</span>
+                <span class="change up">+4.2%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Feed Corn</span>
+                <span class="value">$4.52/bu</span>
+                <span class="change down">-0.6%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="label">Soybean Meal</span>
+                <span class="value">$298/ton</span>
+                <span class="change up">+1.1%</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="logo">
-            <span class="logo-main">Powerstream</span>
-            <span class="logo-sub">Solar & Electric</span>
+            <div class="logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v9h14v-9h3L12 3zm0 12.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="logo-text-wrap">
+                <div class="logo-text">Solar <span>Roof Lease</span></div>
+                <div class="logo-tagline">A new way to profit from your rooftop</div>
+            </div>
         </div>
-        <div class="header-phone">
-            <a href="tel:7177688500">(717) 768-8500</a>
-            <span>Call or Text</span>
+        <div class="header-contact">
+            <div class="header-phone">
+                <a href="tel:7177688500">(717) 768-8500</a>
+                <span>Call for Assessment</span>
+            </div>
+            <a href="#apply" class="header-cta">Get $100K Quote</a>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <span class="hero-tag">🐔 Chicken Farmers Only</span>
-            <h1>Get Paid for Your Roof</h1>
-            <span class="hero-amount">$100,000</span>
-            <h2>We lease your chicken house roof. You do nothing. Serving Lancaster, Chester & Berks Counties.</h2>
-            
-            <div class="benefits">
-                <div class="benefit">
-                    <span class="benefit-icon">✓</span>
-                    Zero Cost
+            <div class="hero-text">
+                <div class="hero-badge">Commercial Poultry Operations</div>
+                <h1>
+                    Monetize Your Rooftop
+                    <span class="hero-amount">$100,000</span>
+                </h1>
+                <p class="hero-sub">
+                    We lease your chicken house roof for solar installation. You receive a lump-sum payment upfront. No cost, no risk, no maintenance for 25 years.
+                </p>
+                <div class="hero-benefits">
+                    <div class="hero-benefit">
+                        <svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        Zero Installation Cost
+                    </div>
+                    <div class="hero-benefit">
+                        <svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        Zero Liability
+                    </div>
+                    <div class="hero-benefit">
+                        <svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        Zero Maintenance
+                    </div>
                 </div>
-                <div class="benefit">
-                    <span class="benefit-icon">✓</span>
-                    Zero Liability
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">$70B</div>
+                        <div class="hero-stat-label">US Poultry Industry</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">9.3B</div>
+                        <div class="hero-stat-label">Birds Produced/Year</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">$35</div>
+                        <div class="hero-stat-label">PA SREC Value</div>
+                    </div>
                 </div>
-                <div class="benefit">
-                    <span class="benefit-icon">✓</span>
-                    Zero Maintenance
+            </div>
+
+            <div class="hero-form-wrap" id="apply">
+                <div class="hero-form-header">
+                    <h2>Free Roof Assessment</h2>
+                    <p>See if your operation qualifies</p>
+                </div>
+
+                <form class="lead-form" id="leadForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Miller" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(717) 555-1234" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Property Address</label>
+                        <input type="text" id="address" name="address" placeholder="123 Farm Road, Lancaster, PA" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="buildings">Number of Houses</label>
+                            <select id="buildings" name="buildings">
+                                <option value="">Select...</option>
+                                <option value="1-2">1-2 houses</option>
+                                <option value="3-4">3-4 houses</option>
+                                <option value="5-6">5-6 houses</option>
+                                <option value="7+">7+ houses</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="operation">Operation Type</label>
+                            <select id="operation" name="operation">
+                                <option value="">Select...</option>
+                                <option value="broiler">Broiler</option>
+                                <option value="layer">Layer/Egg</option>
+                                <option value="pullet">Pullet</option>
+                                <option value="turkey">Turkey</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Request Free Assessment
+                    </button>
+
+                    <div class="form-footer">
+                        No obligation • Response within 24 hours
+                    </div>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                    </div>
+                    <h3>Assessment Requested</h3>
+                    <p>We'll contact you within 24 hours to schedule your free roof evaluation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Form Section -->
-    <section class="form-section">
-        <div class="form-header">
-            <h3>Free Roof Assessment</h3>
-            <p>See if your chicken house qualifies for $100,000</p>
-        </div>
-
-        <div class="error-message" id="errorMessage"></div>
-
-        <form class="lead-form" id="leadForm">
-            <div class="form-group">
-                <label for="name">Your Name *</label>
-                <input type="text" id="name" name="name" placeholder="John Miller" required>
+    <!-- Industry Stats -->
+    <section class="industry-stats">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>The Poultry Solar Opportunity</h2>
+                <p>Large roof surfaces, ideal orientation, and strong PA incentives make chicken houses perfect for solar leasing</p>
             </div>
-
-            <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" placeholder="(717) 555-1234" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email (Optional)</label>
-                <input type="email" id="email" name="email" placeholder="john@example.com">
-            </div>
-
-            <div class="form-group">
-                <label for="address">Property Address *</label>
-                <input type="text" id="address" name="address" placeholder="123 Farm Road, Lancaster, PA" required>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="roof_size">Roof Size (est.)</label>
-                    <select id="roof_size" name="roof_size">
-                        <option value="">Select...</option>
-                        <option value="10k-20k">10,000 - 20,000 sq ft</option>
-                        <option value="20k-40k">20,000 - 40,000 sq ft</option>
-                        <option value="40k+">40,000+ sq ft</option>
-                        <option value="not-sure">Not Sure</option>
-                    </select>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    </div>
+                    <div class="stat-card-value">25,000</div>
+                    <div class="stat-card-label">Avg. Roof Sq Ft per House</div>
                 </div>
-                <div class="form-group">
-                    <label for="buildings">Buildings</label>
-                    <select id="buildings" name="buildings">
-                        <option value="">Select...</option>
-                        <option value="1">1 building</option>
-                        <option value="2">2 buildings</option>
-                        <option value="3">3 buildings</option>
-                        <option value="4+">4+ buildings</option>
-                    </select>
+                <div class="stat-card">
+                    <div class="stat-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+                    </div>
+                    <div class="stat-card-value">102 lbs</div>
+                    <div class="stat-card-label">Per Capita Chicken/Year</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/></svg>
+                    </div>
+                    <div class="stat-card-value">$35</div>
+                    <div class="stat-card-label">PA SREC Value (per MWh)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3.55 18.54l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8zM11 22.45h2V19.5h-2v2.95zM4 10.5H1v2h3v-2zm11-4.19V1.5H9v4.81C7.21 7.35 6 9.28 6 11.5c0 3.31 2.69 6 6 6s6-2.69 6-6c0-2.22-1.21-4.15-3-5.19zm5 4.19v2h3v-2h-3zm-2.76 7.66l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4z"/></svg>
+                    </div>
+                    <div class="stat-card-value">East-West</div>
+                    <div class="stat-card-label">Ideal Roof Orientation</div>
                 </div>
             </div>
-
-            <!-- Honeypot spam protection -->
-            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
-
-            <button type="submit" class="submit-btn" id="submitBtn">
-                Get My Free Assessment →
-            </button>
-
-            <div class="form-footer">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-                Your info is secure & never shared
-            </div>
-        </form>
-
-        <div class="success-message" id="successMessage">
-            <div class="success-icon">✓</div>
-            <h3>You're On the List!</h3>
-            <p>We'll call you within 24 hours to schedule your free roof assessment.</p>
         </div>
     </section>
 
-    <!-- Trust Section -->
-    <section class="trust-section">
-        <div class="trust-badges">
-            <div class="trust-badge">
-                <span class="trust-badge-icon">🏠</span>
-                <span>PA Licensed</span>
-            </div>
-            <div class="trust-badge">
-                <span class="trust-badge-icon">🛡️</span>
-                <span>Fully Insured</span>
-            </div>
-            <div class="trust-badge">
-                <span class="trust-badge-icon">👨‍👩‍👧‍👦</span>
-                <span>Family Owned</span>
+    <!-- Why Section -->
+    <section class="why-section">
+        <div class="section-container">
+            <div class="why-grid">
+                <div class="why-content">
+                    <h2>Why a Lump Sum Payment?</h2>
+                    <p>
+                        Most solar companies offer $1/sq ft annually—that's $25,000/year spread over decades. Our model delivers transformative capital on Day 1.
+                    </p>
+                    <ul class="why-list">
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            <span><strong>Immediate capital</strong> for debt paydown, equipment, or expansion</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            <span><strong>No waiting</strong> 4+ years to accumulate $100K</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            <span><strong>Separate from integrator contract</strong>—your business decision</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            <span><strong>Full roof protection</strong>—we're liable for any damage</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            <span><strong>Transfer with sale</strong>—adds value if you sell the farm</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="comparison-table">
+                    <div class="comparison-header">
+                        <div>Payment Model</div>
+                        <div>Our Offer</div>
+                        <div>Industry Standard</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Upfront Payment</div>
+                        <div class="highlight">$100,000</div>
+                        <div class="dim">$0</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Year 1 Total</div>
+                        <div class="highlight">$100,000</div>
+                        <div class="dim">~$25,000</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Year 4 Total</div>
+                        <div class="highlight">$100,000</div>
+                        <div class="dim">~$100,000</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Installation Cost</div>
+                        <div class="highlight">$0</div>
+                        <div class="dim">$0</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Maintenance</div>
+                        <div class="highlight">None</div>
+                        <div class="dim">None</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div>Term</div>
+                        <div class="highlight">25 Years</div>
+                        <div class="dim">20-25 Years</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <p class="trust-text">
-            Powerstream Solar has been serving Pennsylvania farmers since 2003. PA HIC License #113179.
-        </p>
     </section>
 
     <!-- How It Works -->
-    <section class="how-it-works">
-        <h3>How It Works</h3>
-        <div class="steps">
-            <div class="step">
-                <span class="step-number">1</span>
-                <div class="step-content">
-                    <h4>Free Assessment</h4>
-                    <p>We evaluate your roof size, condition, and sun exposure</p>
+    <section class="how-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>From assessment to payment in 60-90 days</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Free Assessment</h3>
+                    <p>We evaluate roof size, condition, orientation, and sun exposure at no cost</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Custom Quote</h3>
+                    <p>Receive a detailed proposal based on your specific buildings and roof specs</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Sign Lease</h3>
+                    <p>Simple 25-year agreement. We handle all permits, engineering, and paperwork</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Get Paid</h3>
+                    <p>Receive $100,000 within 30 days of system commissioning</p>
                 </div>
             </div>
-            <div class="step">
-                <span class="step-number">2</span>
-                <div class="step-content">
-                    <h4>Sign the Lease</h4>
-                    <p>Simple agreement – we handle all permits and paperwork</p>
+        </div>
+    </section>
+
+    <!-- Qualifications -->
+    <section class="qualify-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Does Your Operation Qualify?</h2>
+                <p>Most commercial poultry houses meet our requirements</p>
+            </div>
+            <div class="qualify-grid">
+                <div class="qualify-card">
+                    <h3>
+                        <svg viewBox="0 0 20 20" fill="#22c55e"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        Ideal Candidates
+                    </h3>
+                    <ul class="qualify-list yes">
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            15,000+ sq ft of roof space
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Metal or structurally sound roof
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Roof less than 15 years old
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Minimal tree shading
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Pennsylvania location
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Property ownership (not leased land)
+                        </li>
+                    </ul>
+                </div>
+                <div class="qualify-card">
+                    <h3>
+                        <svg viewBox="0 0 20 20" fill="#ef4444"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/></svg>
+                        May Not Qualify
+                    </h3>
+                    <ul class="qualify-list no">
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>
+                            Roof under 10,000 sq ft
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>
+                            Roof needing major repairs
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>
+                            Heavy tree cover/shading
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>
+                            Leased/rented property
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>
+                            Outside Pennsylvania
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>
+                            Existing solar installation
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="step">
-                <span class="step-number">3</span>
-                <div class="step-content">
-                    <h4>We Install</h4>
-                    <p>Professional installation at zero cost to you</p>
-                </div>
-            </div>
-            <div class="step">
-                <span class="step-number">4</span>
-                <div class="step-content">
-                    <h4>Get Paid $100,000</h4>
-                    <p>Payment within 30 days of system going live</p>
-                </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-container">
+            <h2>Ready to Monetize Your Rooftop?</h2>
+            <p>Join Pennsylvania poultry operators who have turned unused roof space into $100,000+ in immediate capital.</p>
+            <div class="cta-buttons">
+                <a href="#apply" class="cta-btn primary">Request Free Assessment</a>
+                <a href="tel:7177688500" class="cta-btn secondary">Call (717) 768-8500</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-logo">Powerstream Solar & Electric</div>
-        <div class="footer-info">5808 Northeimer Rd, Narvon, PA 17555</div>
-        <div class="footer-info">(717) 768-8500 • info@powerstreamelectric.com</div>
-        <div class="footer-license">PA HIC License #113179 • © 2025 All Rights Reserved</div>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Solar Roof Lease</h3>
+                <p>
+                    We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 25 years.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Service Area</h4>
+                <ul>
+                    <li>Lancaster County</li>
+                    <li>Chester County</li>
+                    <li>Berks County</li>
+                    <li>Lebanon County</li>
+                    <li>All of Pennsylvania</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Operations</h4>
+                <ul>
+                    <li>Broiler Houses</li>
+                    <li>Layer Facilities</li>
+                    <li>Pullet Houses</li>
+                    <li>Turkey Barns</li>
+                    <li>Agricultural Buildings</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:7177688500">(717) 768-8500</a></li>
+                    <li><a href="mailto:info@solarrooflease.com">info@solarrooflease.com</a></li>
+                    <li>Narvon, PA 17555</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2025 SolarRoofLease. PA HIC License #113179. All rights reserved.</div>
+            <div>Market data for informational purposes only. Prices subject to change.</div>
+        </div>
     </footer>
 
     <!-- Supabase SDK -->
@@ -676,46 +1469,36 @@
         // ===========================================
         // CONFIGURATION - UPDATE THESE VALUES
         // ===========================================
-        const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';  // e.g., 'https://xxxxx.supabase.co'
+        const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
         const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
-        
-        // Optional: Email notification webhook (Zapier, Make, etc.)
-        const NOTIFICATION_WEBHOOK = '';  // Leave empty to disable
+        const NOTIFICATION_WEBHOOK = '';
         // ===========================================
 
-        // Initialize Supabase
         const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-        // Form handling
         const form = document.getElementById('leadForm');
         const submitBtn = document.getElementById('submitBtn');
         const successMessage = document.getElementById('successMessage');
-        const errorMessage = document.getElementById('errorMessage');
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            // Check honeypot
             if (form._gotcha.value) {
-                // Bot detected, silently fail
                 successMessage.classList.add('show');
                 form.classList.add('hidden');
                 return;
             }
 
-            // Show loading state
-            submitBtn.classList.add('loading');
             submitBtn.textContent = 'Submitting...';
-            errorMessage.classList.remove('show');
+            submitBtn.disabled = true;
 
-            // Gather form data
             const leadData = {
                 name: form.name.value.trim(),
                 phone: form.phone.value.trim(),
                 email: form.email.value.trim() || null,
                 address: form.address.value.trim(),
-                roof_size: form.roof_size.value || null,
                 buildings: form.buildings.value || null,
+                operation_type: form.operation.value || null,
                 source: 'landing_page',
                 utm_source: new URLSearchParams(window.location.search).get('utm_source') || null,
                 utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || null,
@@ -723,7 +1506,6 @@
             };
 
             try {
-                // Insert into Supabase
                 const { data, error } = await supabase
                     .from('chicken_farm_leads')
                     .insert([leadData])
@@ -731,29 +1513,26 @@
 
                 if (error) throw error;
 
-                // Optional: Send notification webhook
                 if (NOTIFICATION_WEBHOOK) {
                     fetch(NOTIFICATION_WEBHOOK, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(leadData)
-                    }).catch(() => {}); // Silent fail for webhook
+                    }).catch(() => {});
                 }
 
-                // Show success
                 successMessage.classList.add('show');
                 form.classList.add('hidden');
 
             } catch (err) {
                 console.error('Error:', err);
-                errorMessage.textContent = 'Something went wrong. Please call us at (717) 768-8500.';
-                errorMessage.classList.add('show');
-                submitBtn.classList.remove('loading');
-                submitBtn.textContent = 'Get My Free Assessment →';
+                alert('Something went wrong. Please call us at (717) 768-8500.');
+                submitBtn.textContent = 'Request Free Assessment';
+                submitBtn.disabled = false;
             }
         });
 
-        // Phone number formatting
+        // Phone formatting
         document.getElementById('phone').addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length >= 6) {
@@ -762,6 +1541,17 @@
                 value = '(' + value.slice(0,3) + ') ' + value.slice(3);
             }
             e.target.value = value;
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
         });
     </script>
 </body>
