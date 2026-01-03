@@ -477,7 +477,7 @@
             <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 30 years.</p><img src="logo.png" alt="Powerstream Solar & Electric" style="height: 45px; margin-top: 16px; filter: brightness(0) invert(1); opacity: 0.8;"></div>
             <div class="footer-col"><h4>Service Area</h4><ul><li>Lancaster County</li><li>Chester County</li><li>Berks County</li><li>Lebanon County</li><li>All of Pennsylvania</li></ul></div>
             <div class="footer-col"><h4>Operations</h4><ul><li>Broiler Houses</li><li>Layer Facilities</li><li>Pullet Houses</li><li>Turkey Barns</li><li>Agricultural Buildings</li></ul></div>
-            <div class="footer-col"><h4>Contact</h4><ul><li><a href="#schedule">Schedule a Call</a></li><li><a href="mailto:izzy@powerstreamelectric.com">izzy@powerstreamelectric.com</a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li><li><a href="/investors">Investor Relations</a></li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul><li><a href="#schedule">Schedule a Call</a></li><li><a href="/cdn-cgi/l/email-protection#1c756666655c6c736b796e6f686e797d717970797f686e757f327f7371"><span class="__cf_email__" data-cfemail="630a19191a23130c14061110171106020e060f060017110a004d000c0e">[email&#160;protected]</span></a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li><li><a href="/investors">Investor Relations</a></li></ul></div>
         </div>
         <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div style="display: flex; gap: 16px;"><span>Market data from USDA</span><span>Site by <a href="#" style="color: var(--gold);">OG71</a></span></div></div>
     </footer>
@@ -503,7 +503,7 @@
     </div>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBS8M679GR"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-QBS8M679GR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -562,14 +562,31 @@
                 e.target.value = v;
             });
 
+            // Schedule Call Modal
+            var modal = document.getElementById('scheduleModal');
+            var modalClose = document.getElementById('modalClose');
+
             document.querySelectorAll('a[href^="#"]').forEach(function(a) {
                 a.addEventListener('click', function(e) {
                     var href = this.getAttribute('href');
-                    if (href === '#schedule') return; // Modal handles this
+                    if (href === '#schedule') {
+                        e.preventDefault();
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                        document.getElementById('schedule_utm_source').value = params.get('utm_source') || '';
+                        document.getElementById('schedule_utm_medium').value = params.get('utm_medium') || '';
+                        document.getElementById('schedule_utm_campaign').value = params.get('utm_campaign') || '';
+                        return;
+                    }
+                    if (href === '#apply') {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        return;
+                    }
                     e.preventDefault();
                     var t = document.querySelector(href);
                     if (t) {
-                        var offset = 80; // Account for sticky header
+                        var offset = 80;
                         var elementPosition = t.getBoundingClientRect().top + window.pageYOffset;
                         window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
                     }
@@ -611,30 +628,7 @@
             // Load ticker on page load
             loadTicker();
 
-            // Schedule Call Modal
-            var modal = document.getElementById('scheduleModal');
-            var modalClose = document.getElementById('modalClose');
-            var scheduleLinks = document.querySelectorAll('a[href="#schedule"]');
-            
-            var modalOpened = false;
-            function openModal(e) {
-                if (modalOpened) return;
-                modalOpened = true;
-                e.preventDefault();
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-                // Copy UTM params to modal form
-                document.getElementById('schedule_utm_source').value = params.get('utm_source') || '';
-                document.getElementById('schedule_utm_medium').value = params.get('utm_medium') || '';
-                document.getElementById('schedule_utm_campaign').value = params.get('utm_campaign') || '';
-                setTimeout(function() { modalOpened = false; }, 300);
-            }
-            
-            scheduleLinks.forEach(function(link) {
-                link.addEventListener('click', openModal);
-                link.addEventListener('touchend', openModal);
-            });
-            
+            // Modal close handlers
             function closeModal() {
                 modal.classList.remove('active');
                 document.body.style.overflow = '';
@@ -654,3 +648,13 @@
                 scheduleSubmitBtn.textContent = 'Submitting...';
                 scheduleSubmitBtn.disabled = true;
                 if (typeof gtag !== 'undefined') {
+                    gtag('event', 'schedule_call', {
+                        'event_category': 'form',
+                        'event_label': 'schedule_call_request'
+                    });
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
