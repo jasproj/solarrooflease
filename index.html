@@ -47,6 +47,9 @@
         .header-phone span { display: block; font-size: 11px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.5px; }
         .header-cta { background: var(--forest); color: var(--white); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.2s; }
         .header-cta:hover { background: var(--forest-dark); }
+        .header-investor { color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        .header-investor:hover { color: var(--forest); }
+        @media (max-width: 768px) { .header-investor { display: none; } }
 
         .hero { background: linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%); padding: 80px 24px; position: relative; overflow: hidden; }
         .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); animation: heroDrift 120s linear infinite; }
@@ -240,6 +243,7 @@
             <img src="logo.png" alt="Powerstream Solar & Electric">
         </a>
         <div class="header-contact">
+            <a href="/investors" class="header-investor">Investor Relations</a>
             <div class="header-phone">
                 <a href="tel:7177688500">(717) 768-8500</a>
                 <span>Call for Assessment</span>
@@ -345,19 +349,19 @@
 
     <section class="how-section">
         <div class="section-container">
-            <div class="section-header"><h2>How It Works</h2><p>From first call to payment in as little as 90 days</p></div>
+            <div class="section-header"><h2>How It Works</h2><p>A simple process from start to finish</p></div>
             <div class="steps-grid">
                 <div class="step-card"><div class="step-number">1</div><h3>Free Assessment</h3><p>We evaluate your roof size, condition, and solar potential at no cost</p></div>
                 <div class="step-card"><div class="step-number">2</div><h3>Custom Offer</h3><p>Receive a firm cash offer based on your specific property</p></div>
                 <div class="step-card"><div class="step-number">3</div><h3>We Install</h3><p>Our team handles all permits, installation, and grid connection</p></div>
-                <div class="step-card"><div class="step-number">4</div><h3>Get Paid</h3><p>Receive $100,000 within 30 days of system commissioning</p></div>
+                <div class="step-card"><div class="step-number">4</div><h3>Get Paid</h3><p>Receive your lump sum payment at closing</p></div>
             </div>
         </div>
     </section>
 
     <section class="qualify-section">
         <div class="section-container">
-            <div class="section-header"><h2>Does Your Operation Qualify?</h2><p>Most commercial poultry houses meet our requirements</p></div>
+            <div class="section-header"><h2>Does Your Roof Qualify?</h2><p>Most commercial poultry houses meet our requirements</p></div>
             <div class="qualify-grid">
                 <div class="qualify-card">
                     <h3><svg viewBox="0 0 20 20" fill="#22c55e"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>Ideal Candidates</h3>
@@ -460,12 +464,12 @@
             <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 30 years.</p><img src="logo.png" alt="Powerstream Solar & Electric" style="height: 45px; margin-top: 16px; filter: brightness(0) invert(1); opacity: 0.8;"></div>
             <div class="footer-col"><h4>Service Area</h4><ul><li>Lancaster County</li><li>Chester County</li><li>Berks County</li><li>Lebanon County</li><li>All of Pennsylvania</li></ul></div>
             <div class="footer-col"><h4>Operations</h4><ul><li>Broiler Houses</li><li>Layer Facilities</li><li>Pullet Houses</li><li>Turkey Barns</li><li>Agricultural Buildings</li></ul></div>
-            <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7177688500">(717) 768-8500</a></li><li><a href="/cdn-cgi/l/email-protection#2e474048416e5d41424f5c5c414148424b4f5d4b004d4143"><span class="__cf_email__" data-cfemail="93fafdf5fcd3e0fcfff2e1e1fcfcf5fff6f2e0f6bdf0fcfe">[email&#160;protected]</span></a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7177688500">(717) 768-8500</a></li><li><a href="mailto:info@solarrooflease.com">info@solarrooflease.com</a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li><li><a href="/investors">Investor Relations</a></li></ul></div>
         </div>
         <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div style="display: flex; gap: 16px;"><span>Market data from USDA</span><span>Site by <a href="#" style="color: var(--gold);">OG71</a></span></div></div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBS8M679GR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
