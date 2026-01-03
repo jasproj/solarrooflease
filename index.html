@@ -43,14 +43,13 @@
         .logo img { height: 50px; width: auto; }
         .logo-tagline { margin-left: 12px; font-size: 14px; font-weight: 600; color: var(--forest); letter-spacing: 0.5px; }
         .header-contact { display: flex; align-items: center; gap: 24px; }
-        .header-phone { text-align: right; }
-        .header-phone a { color: var(--charcoal); text-decoration: none; font-weight: 700; font-size: 16px; }
-        .header-phone span { display: block; font-size: 11px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.5px; }
+        .header-schedule { color: var(--forest); text-decoration: none; font-weight: 600; font-size: 14px; padding: 10px 20px; border: 2px solid var(--forest); border-radius: 6px; transition: all 0.2s; }
+        .header-schedule:hover { background: var(--forest); color: var(--white); }
         .header-cta { background: var(--forest); color: var(--white); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.2s; }
         .header-cta:hover { background: var(--forest-dark); }
         .header-investor { color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
         .header-investor:hover { color: var(--forest); }
-        @media (max-width: 768px) { .logo-tagline { display: none; } }
+        @media (max-width: 768px) { .logo-tagline { display: none; } .header-schedule { padding: 8px 12px; font-size: 12px; } }
 
         .hero { background: linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%); padding: 80px 24px; position: relative; overflow: hidden; }
         .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px); background-size: 24px 24px; z-index: 0; pointer-events: none; animation: heroDrift 120s linear infinite; }
@@ -97,6 +96,19 @@
         .slider-labels span:nth-child(2) { font-weight: 600; color: var(--charcoal); }
         .slider-label-center { text-align: center; font-size: 12px; font-weight: 600; color: var(--charcoal); margin-top: 8px; }
         .calculator-disclaimer { font-size: 11px; color: var(--slate); text-align: center; margin-top: 12px; font-style: italic; }
+
+        /* Modal Styles */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center; }
+        .modal-overlay.active { display: flex; }
+        .modal-content { background: var(--white); border-radius: 12px; padding: 40px; max-width: 450px; width: 90%; position: relative; }
+        .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--slate); line-height: 1; }
+        .modal-close:hover { color: var(--charcoal); }
+        .modal-content h2 { font-size: 24px; margin-bottom: 8px; color: var(--charcoal); }
+        .modal-content p { font-size: 14px; color: var(--slate); margin-bottom: 24px; }
+        .modal-form .form-group { margin-bottom: 16px; }
+        .modal-form label { display: block; font-size: 13px; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
+        .modal-form input, .modal-form select { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; }
+        .modal-form input:focus, .modal-form select:focus { outline: none; border-color: var(--forest); box-shadow: 0 0 0 3px rgba(26, 77, 46, 0.1); }
 
         .industry-stats { background: linear-gradient(rgba(26, 77, 46, 0.85), rgba(15, 51, 32, 0.9)), url('farm-aerial.jpg') center/cover no-repeat; padding: 60px 24px; }
         .industry-stats .section-header h2 { color: var(--white); }
@@ -247,10 +259,7 @@
             <span class="logo-tagline">Solar Roof Lease</span>
         </a>
         <div class="header-contact">
-            <div class="header-phone">
-                <a href="tel:7177688500">(717) 768-8500</a>
-                <span>Call for Assessment</span>
-            </div>
+            <a href="#schedule" class="header-schedule">Schedule a Call</a>
             <a href="#apply" class="header-cta">Get $100K Quote</a>
         </div>
     </header>
@@ -457,7 +466,7 @@
             <p>Join Pennsylvania poultry operators who have turned unused roof space into $100,000+ in immediate capital.</p>
             <div class="cta-buttons">
                 <a href="#apply" class="cta-btn primary">Request Free Assessment</a>
-                <a href="tel:7177688500" class="cta-btn secondary">Call (717) 768-8500</a>
+                <a href="#schedule" class="cta-btn secondary">Schedule a Call</a>
             </div>
         </div>
     </section>
@@ -467,10 +476,31 @@
             <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 30 years.</p><img src="logo.png" alt="Powerstream Solar & Electric" style="height: 45px; margin-top: 16px; filter: brightness(0) invert(1); opacity: 0.8;"></div>
             <div class="footer-col"><h4>Service Area</h4><ul><li>Lancaster County</li><li>Chester County</li><li>Berks County</li><li>Lebanon County</li><li>All of Pennsylvania</li></ul></div>
             <div class="footer-col"><h4>Operations</h4><ul><li>Broiler Houses</li><li>Layer Facilities</li><li>Pullet Houses</li><li>Turkey Barns</li><li>Agricultural Buildings</li></ul></div>
-            <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7177688500">(717) 768-8500</a></li><li><a href="/cdn-cgi/l/email-protection#462f2820290635292a2734342929202a232735236825292b"><span class="__cf_email__" data-cfemail="721b1c141d32011d1e1300001d1d141e171301175c111d1f">[email&#160;protected]</span></a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li><li><a href="/investors">Investor Relations</a></li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul><li><a href="#schedule">Schedule a Call</a></li><li><a href="mailto:info@solarrooflease.com">info@solarrooflease.com</a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li><li><a href="/investors">Investor Relations</a></li></ul></div>
         </div>
         <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div style="display: flex; gap: 16px;"><span>Market data from USDA</span><span>Site by <a href="#" style="color: var(--gold);">OG71</a></span></div></div>
     </footer>
+
+    <!-- Schedule Call Modal -->
+    <div class="modal-overlay" id="scheduleModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h2>Schedule a Call</h2>
+            <p>Tell us a bit about your operation and we'll reach out to schedule a time.</p>
+            <form class="modal-form" id="scheduleForm" action="https://formspree.io/f/mzdzrpbb" method="POST">
+                <input type="hidden" name="form_type" value="schedule_call">
+                <input type="hidden" name="lead_source" value="solarrooflease.com">
+                <input type="hidden" name="utm_source" id="schedule_utm_source">
+                <input type="hidden" name="utm_medium" id="schedule_utm_medium">
+                <input type="hidden" name="utm_campaign" id="schedule_utm_campaign">
+                <div class="form-group"><label for="schedule_name">Name</label><input type="text" id="schedule_name" name="name" required></div>
+                <div class="form-group"><label for="schedule_phone">Phone Number</label><input type="tel" id="schedule_phone" name="phone" required></div>
+                <div class="form-group"><label for="schedule_email">Email</label><input type="email" id="schedule_email" name="email" required></div>
+                <div class="form-group"><label for="schedule_best_time">Best Time to Call</label><select id="schedule_best_time" name="best_time"><option value="morning">Morning (8am-12pm)</option><option value="afternoon">Afternoon (12pm-5pm)</option><option value="evening">Evening (5pm-8pm)</option></select></div>
+                <button type="submit" class="submit-btn" id="scheduleSubmitBtn">Request Call</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Google tag (gtag.js) -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-QBS8M679GR"></script>
@@ -574,6 +604,45 @@
 
             // Load ticker on page load
             loadTicker();
+
+            // Schedule Call Modal
+            var modal = document.getElementById('scheduleModal');
+            var modalClose = document.getElementById('modalClose');
+            var scheduleLinks = document.querySelectorAll('a[href="#schedule"]');
+            
+            scheduleLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    modal.classList.add('active');
+                    // Copy UTM params to modal form
+                    document.getElementById('schedule_utm_source').value = params.get('utm_source') || '';
+                    document.getElementById('schedule_utm_medium').value = params.get('utm_medium') || '';
+                    document.getElementById('schedule_utm_campaign').value = params.get('utm_campaign') || '';
+                });
+            });
+            
+            modalClose.addEventListener('click', function() {
+                modal.classList.remove('active');
+            });
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+
+            var scheduleForm = document.getElementById('scheduleForm');
+            var scheduleSubmitBtn = document.getElementById('scheduleSubmitBtn');
+            scheduleForm.addEventListener('submit', function() {
+                scheduleSubmitBtn.textContent = 'Submitting...';
+                scheduleSubmitBtn.disabled = true;
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'schedule_call', {
+                        'event_category': 'form',
+                        'event_label': 'schedule_call_request'
+                    });
+                }
+            });
         })();
     </script>
 </body>
