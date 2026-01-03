@@ -39,8 +39,9 @@
         .ticker-item .change.neutral { background: rgba(255, 255, 255, 0.1); color: #888; }
 
         .header { background: var(--white); padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
-        .logo { display: flex; align-items: center; }
+        .logo { display: flex; align-items: center; text-decoration: none; }
         .logo img { height: 50px; width: auto; }
+        .logo-tagline { margin-left: 12px; font-size: 14px; font-weight: 600; color: var(--forest); letter-spacing: 0.5px; }
         .header-contact { display: flex; align-items: center; gap: 24px; }
         .header-phone { text-align: right; }
         .header-phone a { color: var(--charcoal); text-decoration: none; font-weight: 700; font-size: 16px; }
@@ -49,7 +50,7 @@
         .header-cta:hover { background: var(--forest-dark); }
         .header-investor { color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
         .header-investor:hover { color: var(--forest); }
-        @media (max-width: 768px) { .header-investor { display: none; } }
+        @media (max-width: 768px) { .logo-tagline { display: none; } }
 
         .hero { background: linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%); padding: 80px 24px; position: relative; overflow: hidden; }
         .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px); background-size: 24px 24px; z-index: 0; pointer-events: none; animation: heroDrift 120s linear infinite; }
@@ -74,7 +75,7 @@
 
         .hero-form-wrap { background: var(--white); border-radius: 12px; padding: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
         .hero-form-header { text-align: center; margin-bottom: 24px; }
-        .hero-form-header h2 { font-size: 20px; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
+        .hero-form-header h2 { font-size: 26px; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
         .hero-form-header p { font-size: 14px; color: var(--slate); }
         .form-group { margin-bottom: 16px; }
         .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
@@ -141,8 +142,10 @@
         .step-card p { font-size: 14px; color: rgba(255,255,255,0.6); }
 
         @keyframes stepGlow {
-            0%, 14% { box-shadow: 0 0 30px rgba(201, 162, 39, 0.8); }
-            15%, 100% { box-shadow: none; }
+            0% { box-shadow: 0 0 0 rgba(201, 162, 39, 0); }
+            7% { box-shadow: 0 0 40px rgba(201, 162, 39, 1), 0 0 60px rgba(201, 162, 39, 0.5); }
+            14% { box-shadow: 0 0 0 rgba(201, 162, 39, 0); }
+            100% { box-shadow: none; }
         }
         .step-card:nth-child(1) .step-number { animation: stepGlow 7s infinite; animation-delay: 0s; }
         .step-card:nth-child(2) .step-number { animation: stepGlow 7s infinite; animation-delay: 1.25s; }
@@ -241,9 +244,9 @@
     <header class="header">
         <a href="/" class="logo">
             <img src="logo.png" alt="Powerstream Solar & Electric">
+            <span class="logo-tagline">Solar Roof Lease</span>
         </a>
         <div class="header-contact">
-            <a href="/investors" class="header-investor">Investor Relations</a>
             <div class="header-phone">
                 <a href="tel:7177688500">(717) 768-8500</a>
                 <span>Call for Assessment</span>
