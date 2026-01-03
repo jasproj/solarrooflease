@@ -73,7 +73,11 @@
         .hero-stat-value { font-size: 28px; font-weight: 700; color: var(--gold); }
         .hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; }
 
-        .hero-form-wrap { background: var(--white); border-radius: 12px; padding: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); scroll-margin-top: 80px; }
+        .hero-form-wrap { background: var(--white); border-radius: 12px; padding: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); scroll-margin-top: 80px; margin-bottom: 48px; position: relative; }
+        @media (max-width: 1024px) {
+            .hero-form-wrap { margin-bottom: 0; border-radius: 12px 12px 0 0; }
+            .hero-form-wrap::after { content: ''; position: absolute; top: 100%; left: -24px; right: -24px; height: 100px; background: var(--white); }
+        }
         .hero-form-header { text-align: center; margin-bottom: 24px; }
         .hero-form-header h2 { font-size: 26px; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
         .hero-form-header p { font-size: 14px; color: var(--slate); }
@@ -224,6 +228,7 @@
         .lead-form.hidden { display: none; }
 
         @media (max-width: 1024px) {
+            .hero { overflow: visible; }
             .hero-content { grid-template-columns: 1fr; gap: 40px; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .steps-grid { grid-template-columns: repeat(2, 1fr); }
@@ -233,7 +238,7 @@
         }
         @media (max-width: 640px) {
             .header-cta { display: none; }
-            .hero { padding: 48px 20px; }
+            .hero { padding: 48px 20px 0 20px; overflow: visible; }
             .hero h1 { font-size: 32px; }
             .hero-amount { font-size: 38px; }
             .hero-today { font-size: 32px; }
@@ -580,7 +585,11 @@
                     }
                     if (href === '#apply') {
                         e.preventDefault();
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        var applyEl = document.querySelector('#apply');
+                        if (applyEl) {
+                            var elementPosition = applyEl.getBoundingClientRect().top + window.pageYOffset;
+                            window.scrollTo({ top: elementPosition - 20, behavior: 'smooth' });
+                        }
                         return;
                     }
                     e.preventDefault();
