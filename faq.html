@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | Powerstream Solar & Electric | Chicken House Roof Lease</title>
-    <meta name="description" content="Frequently asked questions about leasing your chicken house roof for solar installation. Get $100,000 upfront from Powerstream Solar & Electric.">
+    <title>Powerstream Solar & Electric | Chicken House Roof Lease</title>
+    <meta name="description" content="Monetize your chicken house rooftop. $100,000 lump sum payment. Zero cost, zero risk. Serving Pennsylvania poultry operations.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --forest: #1a4d2e;
@@ -21,34 +24,145 @@
             --red-accent: #ef4444;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--light-gray); color: var(--charcoal); line-height: 1.6; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--white); color: var(--charcoal); line-height: 1.6; }
 
-        /* Header */
+        .ticker-wrap { background: var(--charcoal); padding: 8px 0; overflow: hidden; border-bottom: 1px solid #333; }
+        .ticker { display: flex; animation: ticker 45s linear infinite; white-space: nowrap; }
+        .ticker:hover { animation-play-state: paused; }
+        @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .ticker-item { display: inline-flex; align-items: center; padding: 0 32px; font-size: 13px; color: #a0a0a0; }
+        .ticker-item .label { margin-right: 8px; color: #888; }
+        .ticker-item .value { font-weight: 600; color: var(--white); margin-right: 6px; }
+        .ticker-item .change { font-size: 11px; padding: 2px 6px; border-radius: 3px; }
+        .ticker-item .change.up { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+        .ticker-item .change.down { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+        .ticker-item .change.neutral { background: rgba(255, 255, 255, 0.1); color: #888; }
+
         .header { background: var(--white); padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
         .logo { display: flex; align-items: center; }
         .logo img { height: 50px; width: auto; }
         .header-contact { display: flex; align-items: center; gap: 24px; }
-        .header-phone { text-align: right; display: none; }
+        .header-phone { text-align: right; }
         .header-phone a { color: var(--charcoal); text-decoration: none; font-weight: 700; font-size: 16px; }
         .header-phone span { display: block; font-size: 11px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.5px; }
         .header-cta { background: var(--forest); color: var(--white); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.2s; }
         .header-cta:hover { background: var(--forest-dark); }
-        @media (min-width: 640px) { .header-phone { display: block; } }
 
-        /* Hero */
-        .faq-hero { background: linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%); color: var(--white); padding: 64px 24px; text-align: center; }
-        .faq-hero h1 { font-size: 40px; font-weight: 800; margin-bottom: 12px; }
-        .faq-hero p { font-size: 18px; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; }
+        .hero { background: linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%); padding: 80px 24px; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); animation: heroDrift 120s linear infinite; }
+        @keyframes heroDrift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50%, 50%); }
+        }
+        .hero-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+        .hero-text { color: var(--white); }
+        .hero-badge { display: inline-block; background: rgba(201, 162, 39, 0.15); border: 1px solid var(--gold); color: var(--gold); padding: 6px 14px; border-radius: 4px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+        .hero h1 { font-size: 44px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+        .hero-amount { color: var(--gold); font-size: 46px; font-weight: 800; }
+        .hero-today { color: var(--white); font-size: 44px; font-weight: 800; }
+        .hero-sub { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 32px; max-width: 480px; }
+        .hero-benefits { display: flex; gap: 24px; margin-bottom: 32px; }
+        .hero-benefit { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; }
+        .hero-benefit svg { width: 20px; height: 20px; fill: var(--green-accent); }
+        .hero-stats { display: flex; gap: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15); }
+        .hero-stat { text-align: left; }
+        .hero-stat-value { font-size: 28px; font-weight: 700; color: var(--gold); }
+        .hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* FAQ Content */
-        .faq-content { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+        .hero-form-wrap { background: var(--white); border-radius: 12px; padding: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        .hero-form-header { text-align: center; margin-bottom: 24px; }
+        .hero-form-header h2 { font-size: 20px; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
+        .hero-form-header p { font-size: 14px; color: var(--slate); }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
+        .form-group input, .form-group select { width: 100%; padding: 12px 14px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.2s, box-shadow 0.2s; background: var(--white); }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--forest); box-shadow: 0 0 0 3px rgba(26, 77, 46, 0.1); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .submit-btn { width: 100%; padding: 14px; background: var(--forest); color: var(--white); border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s; font-family: inherit; }
+        .submit-btn:hover { background: var(--forest-dark); }
+        .form-footer { text-align: center; margin-top: 16px; font-size: 12px; color: var(--slate); }
 
-        /* Category */
-        .faq-category { margin-bottom: 48px; }
-        .faq-category-title { font-size: 24px; font-weight: 700; color: var(--charcoal); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--gold); }
+        .payment-calculator { background: var(--light-gray); border-radius: 8px; padding: 20px; margin-bottom: 24px; }
+        .payment-calculator label { display: block; font-size: 13px; font-weight: 600; color: var(--charcoal); margin-bottom: 8px; text-align: center; }
+        .slider-value { text-align: center; margin-bottom: 12px; }
+        .slider-value span { font-size: 36px; font-weight: 800; color: var(--forest); }
+        .payment-calculator input[type="range"] { width: 100%; height: 8px; border-radius: 4px; background: #d1d5db; outline: none; -webkit-appearance: none; cursor: pointer; }
+        .payment-calculator input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: var(--forest); cursor: pointer; border: 3px solid var(--white); box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+        .payment-calculator input[type="range"]::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: var(--forest); cursor: pointer; border: 3px solid var(--white); box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+        .slider-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--slate); margin-top: 8px; }
+        .slider-labels span:nth-child(2) { font-weight: 600; color: var(--charcoal); }
+        .calculator-disclaimer { font-size: 11px; color: var(--slate); text-align: center; margin-top: 12px; font-style: italic; }
 
-        /* Accordion */
-        .faq-item { border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; background: var(--white); margin-bottom: 12px; }
+        .industry-stats { background: linear-gradient(rgba(26, 77, 46, 0.85), rgba(15, 51, 32, 0.9)), url('farm-aerial.jpg') center/cover no-repeat; padding: 60px 24px; }
+        .industry-stats .section-header h2 { color: var(--white); }
+        .industry-stats .section-header p { color: rgba(255,255,255,0.8); }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 48px; }
+        .section-header h2 { font-size: 32px; font-weight: 700; color: var(--charcoal); margin-bottom: 12px; }
+        .section-header p { font-size: 16px; color: var(--slate); max-width: 600px; margin: 0 auto; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .stat-card { background: var(--white); border-radius: 10px; padding: 24px; text-align: center; border: 1px solid #e5e7eb; }
+        .stat-card-icon { width: 48px; height: 48px; background: rgba(26, 77, 46, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+        .stat-card-icon svg { width: 24px; height: 24px; fill: var(--forest); }
+        .stat-card-value { font-size: 32px; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
+        .stat-card-label { font-size: 13px; color: var(--slate); }
+
+        .why-section { padding: 80px 24px; }
+        .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .why-content h2 { font-size: 36px; font-weight: 700; color: var(--charcoal); margin-bottom: 20px; }
+        .why-content p { font-size: 16px; color: var(--slate); margin-bottom: 24px; }
+        .why-list { list-style: none; }
+        .why-list li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; font-size: 15px; color: var(--charcoal); }
+        .why-list li svg { width: 20px; height: 20px; fill: var(--green-accent); flex-shrink: 0; margin-top: 2px; }
+        .comparison-table { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e5e7eb; }
+        .comparison-header { display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--forest); color: var(--white); font-weight: 600; font-size: 14px; }
+        .comparison-header > div { padding: 16px 20px; text-align: center; }
+        .comparison-header > div:first-child { text-align: left; }
+        .comparison-row { display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid #e5e7eb; }
+        .comparison-row:last-child { border-bottom: none; }
+        .comparison-row > div { padding: 14px 20px; font-size: 14px; text-align: center; }
+        .comparison-row > div:first-child { text-align: left; font-weight: 500; color: var(--charcoal); }
+        .comparison-row .highlight { background: rgba(26, 77, 46, 0.05); color: var(--forest); font-weight: 600; }
+        .comparison-row .dim { color: var(--slate); }
+
+        .how-section { background: var(--charcoal); padding: 80px 24px; color: var(--white); }
+        .how-section .section-header h2 { color: var(--white); }
+        .how-section .section-header p { color: rgba(255,255,255,0.7); }
+        .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+        .step-card { text-align: center; position: relative; }
+        .step-card::after { content: ''; position: absolute; top: 32px; right: -16px; width: 32px; height: 2px; background: var(--gold); }
+        .step-card:last-child::after { display: none; }
+        .step-number { width: 64px; height: 64px; background: var(--forest); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px; font-weight: 700; color: var(--gold); }
+        .step-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+        .step-card p { font-size: 14px; color: rgba(255,255,255,0.6); }
+
+        @keyframes stepGlow {
+            0%, 14% { box-shadow: 0 0 30px rgba(201, 162, 39, 0.8); }
+            15%, 100% { box-shadow: none; }
+        }
+        .step-card:nth-child(1) .step-number { animation: stepGlow 7s infinite; animation-delay: 0s; }
+        .step-card:nth-child(2) .step-number { animation: stepGlow 7s infinite; animation-delay: 1.25s; }
+        .step-card:nth-child(3) .step-number { animation: stepGlow 7s infinite; animation-delay: 2.5s; }
+        .step-card:nth-child(4) .step-number { animation: stepGlow 7s infinite; animation-delay: 3.75s; }
+
+        .qualify-section { padding: 80px 24px; background: var(--light-gray); }
+        .qualify-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+        .qualify-card { background: var(--white); border-radius: 12px; padding: 32px; border: 1px solid #e5e7eb; }
+        .qualify-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 20px; color: var(--charcoal); display: flex; align-items: center; gap: 10px; }
+        .qualify-card h3 svg { width: 24px; height: 24px; }
+        .qualify-list { list-style: none; }
+        .qualify-list li { display: flex; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid #f3f4f6; font-size: 15px; }
+        .qualify-list li:last-child { border-bottom: none; }
+        .qualify-list li svg { width: 18px; height: 18px; flex-shrink: 0; }
+        .qualify-list.yes svg { fill: var(--green-accent); }
+        .qualify-list.no svg { fill: var(--red-accent); }
+
+        /* FAQ Section */
+        .faq-section { padding: 80px 24px; max-width: 800px; margin: 0 auto; }
+        .faq-section h2 { text-align: center; font-size: 32px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
+        .faq-subtitle { text-align: center; color: var(--slate); margin-bottom: 40px; }
+        .faq-accordion { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; background: var(--white); }
         .faq-question { width: 100%; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; background: var(--white); border: none; cursor: pointer; text-align: left; font-size: 17px; font-weight: 600; color: var(--charcoal); transition: background 0.2s; font-family: inherit; }
         .faq-question:hover { background: #f9f9f9; }
         .faq-icon { width: 20px; height: 20px; flex-shrink: 0; transition: transform 0.3s; color: var(--gold); }
@@ -56,19 +170,19 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s; }
         .faq-item.active .faq-answer { max-height: 500px; padding: 0 24px 20px; }
         .faq-answer p { color: var(--slate); line-height: 1.7; margin: 0; }
+        .faq-show-more { display: block; text-align: center; margin-top: 32px; padding: 14px 32px; background: var(--gold); color: var(--charcoal); text-decoration: none; border-radius: 6px; font-weight: 600; transition: background 0.2s; }
+        .faq-show-more:hover { background: var(--gold-light); }
 
-        /* CTA Section */
-        .cta-section { background: var(--forest); padding: 64px 24px; text-align: center; color: var(--white); }
-        .cta-section h2 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
-        .cta-section p { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
-        .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-        .cta-btn { padding: 14px 28px; border-radius: 6px; font-size: 16px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .cta-section { background: var(--forest); padding: 80px 24px; text-align: center; color: var(--white); }
+        .cta-section h2 { font-size: 36px; font-weight: 700; margin-bottom: 16px; }
+        .cta-section p { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; }
+        .cta-btn { padding: 16px 32px; border-radius: 6px; font-size: 16px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
         .cta-btn.primary { background: var(--gold); color: var(--charcoal); }
         .cta-btn.primary:hover { background: var(--gold-light); }
         .cta-btn.secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
         .cta-btn.secondary:hover { background: var(--white); color: var(--forest); }
 
-        /* Footer */
         .footer { background: var(--charcoal); padding: 48px 24px 24px; color: rgba(255,255,255,0.7); }
         .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
         .footer-brand h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
@@ -80,27 +194,46 @@
         .footer-col ul li a:hover { color: var(--white); }
         .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 13px; }
 
-        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        .success-message { display: none; text-align: center; padding: 40px 20px; }
+        .success-message.show { display: block; }
+        .success-icon { width: 64px; height: 64px; background: var(--green-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+        .success-icon svg { width: 32px; height: 32px; fill: var(--white); }
+        .success-message h3 { font-size: 20px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
+        .success-message p { color: var(--slate); }
+        .lead-form.hidden { display: none; }
+
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; gap: 40px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .step-card::after { display: none; }
+            .why-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
         @media (max-width: 640px) {
-            .faq-hero h1 { font-size: 28px; }
-            .faq-hero p { font-size: 16px; }
-            .faq-question { font-size: 15px; padding: 16px 20px; }
+            .header-cta { display: none; }
+            .hero { padding: 48px 20px; }
+            .hero h1 { font-size: 32px; }
+            .hero-amount { font-size: 38px; }
+            .hero-today { font-size: 32px; }
+            .hero-benefits { flex-direction: column; gap: 12px; }
+            .hero-stats { flex-direction: column; gap: 16px; }
+            .stats-grid, .steps-grid, .qualify-grid { grid-template-columns: 1fr; }
+            .cta-buttons { flex-direction: column; }
             .footer-grid { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-            .cta-buttons { flex-direction: column; }
+            .comparison-header, .comparison-row { font-size: 12px; }
+            .comparison-header > div, .comparison-row > div { padding: 10px 8px; }
         }
     </style>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBS8M679GR"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QBS8M679GR');
-    </script>
 </head>
 <body>
+    <div class="ticker-wrap">
+        <div class="ticker" id="marketTicker">
+            <div class="ticker-item"><span class="label">Loading market data...</span></div>
+        </div>
+    </div>
+
     <header class="header">
         <a href="/" class="logo">
             <img src="logo.png" alt="Powerstream Solar & Electric">
@@ -110,20 +243,154 @@
                 <a href="tel:7177688500">(717) 768-8500</a>
                 <span>Call for Assessment</span>
             </div>
-            <a href="/#apply" class="header-cta">Get $100K Quote</a>
+            <a href="#apply" class="header-cta">Get $100K Quote</a>
         </div>
     </header>
 
-    <section class="faq-hero">
-        <h1>Frequently Asked Questions</h1>
-        <p>Everything you need to know about leasing your chicken house roof for solar</p>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">Commercial Poultry Operations</div>
+                <h1>One Payment at Closing.<br><span class="hero-today">30 Years of Zero Work.</span></h1>
+                <p class="hero-sub">One lump sum at installation. Approximately $2 per square foot. 30-year lease. Zero maintenance, zero risk, zero waiting.</p>
+                <div class="hero-benefits">
+                    <div class="hero-benefit"><svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>Zero Installation Cost</div>
+                    <div class="hero-benefit"><svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>Zero Liability</div>
+                    <div class="hero-benefit"><svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>Zero Maintenance</div>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat"><div class="hero-stat-value">$70B</div><div class="hero-stat-label">US Poultry Industry</div></div>
+                    <div class="hero-stat"><div class="hero-stat-value">9.3B</div><div class="hero-stat-label">Birds Produced/Year</div></div>
+                    <div class="hero-stat"><div class="hero-stat-value">$35</div><div class="hero-stat-label">PA SREC Value</div></div>
+                </div>
+            </div>
+            <div class="hero-form-wrap" id="apply">
+                <div class="hero-form-header"><h2>Free Roof Assessment</h2><p>See if your operation qualifies</p></div>
+                
+                <div class="payment-calculator">
+                    <label for="roofSize">Estimate Your Payment</label>
+                    <div class="slider-value"><span id="paymentAmount">$100,000</span></div>
+                    <input type="range" id="roofSize" min="15000" max="100000" value="50000" step="5000">
+                    <div class="slider-labels">
+                        <span>15,000 sq ft</span>
+                        <span id="sizeDisplay">50,000 sq ft</span>
+                        <span>100,000 sq ft</span>
+                    </div>
+                    <p class="calculator-disclaimer">*Estimate only. Final payment based on site assessment.</p>
+                </div>
+
+                <form class="lead-form" id="leadForm" action="https://formspree.io/f/mzdzrpbb" method="POST">
+                    <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="John Miller" required></div>
+                    <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(717) 555-1234" required></div>
+                    <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="john@example.com"></div>
+                    <div class="form-group"><label for="address">Property Address</label><input type="text" id="address" name="address" placeholder="123 Farm Road, Lancaster, PA" required></div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="buildings">Number of Houses</label><select id="buildings" name="buildings"><option value="">Select...</option><option value="1-2">1-2 houses</option><option value="3-4">3-4 houses</option><option value="5-6">5-6 houses</option><option value="7+">7+ houses</option></select></div>
+                        <div class="form-group"><label for="operation">Operation Type</label><select id="operation" name="operation"><option value="">Select...</option><option value="broiler">Broiler</option><option value="layer">Layer/Egg</option><option value="pullet">Pullet</option><option value="turkey">Turkey</option><option value="other">Other</option></select></div>
+                    </div>
+                    <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="utm_source" id="utm_source">
+                    <input type="hidden" name="utm_medium" id="utm_medium">
+                    <input type="hidden" name="utm_campaign" id="utm_campaign">
+                    <input type="hidden" name="referrer" id="referrer">
+                    <input type="hidden" name="landing_page" id="landing_page">
+                    <input type="hidden" name="estimated_sqft" id="estimated_sqft" value="50000">
+                    <input type="hidden" name="estimated_payment" id="estimated_payment" value="$100,000">
+                    <input type="hidden" name="lead_source" value="solarrooflease.com">
+                    <button type="submit" class="submit-btn" id="submitBtn">Request Free Assessment</button>
+                    <div class="form-footer">No obligation • Response within 24 hours</div>
+                </form>
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon"><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></div>
+                    <h3>Assessment Requested</h3><p>We'll contact you within 24 hours to schedule your free roof evaluation.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <main class="faq-content">
+    <section class="industry-stats">
+        <div class="section-container">
+            <div class="section-header"><h2>The Greatest Solar Opportunity of 2026</h2><p>Put 5% down before July 2026 and you have 4 years to install at the full 30% federal tax credit. Wait until after July? Must be completed by end of 2027—or lose the credit entirely.</p></div>
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-card-icon"><svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg></div><div class="stat-card-value">July 2026</div><div class="stat-card-label">Safe Harbor Deadline</div></div>
+                <div class="stat-card"><div class="stat-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/></svg></div><div class="stat-card-value">30%</div><div class="stat-card-label">Federal Tax Credit</div></div>
+                <div class="stat-card"><div class="stat-card-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg></div><div class="stat-card-value">$20</div><div class="stat-card-label">PA SREC Value</div></div>
+                <div class="stat-card"><div class="stat-card-icon"><svg viewBox="0 0 24 24"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div><div class="stat-card-value">$100K+</div><div class="stat-card-label">Your Lump Sum Payment</div></div>
+            </div>
+        </div>
+    </section>
 
-        <div class="faq-category">
-            <h2 class="faq-category-title">The Basics</h2>
+    <section class="why-section">
+        <div class="section-container">
+            <div class="why-grid">
+                <div class="why-content">
+                    <h2>Why a Lump Sum Payment?</h2>
+                    <p>Most solar lease agreements pay you $20-30K per year over time. We offer something different: immediate, transformative capital.</p>
+                    <ul class="why-list">
+                        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Pay off equipment loans or mortgages immediately</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Invest in farm improvements or expansion</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Create a financial safety net for your family</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>No waiting years to see real money</li>
+                    </ul>
+                </div>
+                <div class="comparison-table">
+                    <div class="comparison-header"><div>Timeline</div><div>Our Offer</div><div>Industry Standard</div></div>
+                    <div class="comparison-row"><div>Upfront Payment</div><div class="highlight">$100,000</div><div class="dim">$0</div></div>
+                    <div class="comparison-row"><div>Year 1 Total</div><div class="highlight">$100,000</div><div class="dim">~$25,000</div></div>
+                    <div class="comparison-row"><div>Year 4 Total</div><div class="highlight">$100,000</div><div class="dim">~$100,000</div></div>
+                    <div class="comparison-row"><div>Your Risk</div><div class="highlight">Zero</div><div class="dim">Payment depends on production</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="how-section">
+        <div class="section-container">
+            <div class="section-header"><h2>How It Works</h2><p>From first call to payment in as little as 90 days</p></div>
+            <div class="steps-grid">
+                <div class="step-card"><div class="step-number">1</div><h3>Free Assessment</h3><p>We evaluate your roof size, condition, and solar potential at no cost</p></div>
+                <div class="step-card"><div class="step-number">2</div><h3>Custom Offer</h3><p>Receive a firm cash offer based on your specific property</p></div>
+                <div class="step-card"><div class="step-number">3</div><h3>We Install</h3><p>Our team handles all permits, installation, and grid connection</p></div>
+                <div class="step-card"><div class="step-number">4</div><h3>Get Paid</h3><p>Receive $100,000 within 30 days of system commissioning</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="qualify-section">
+        <div class="section-container">
+            <div class="section-header"><h2>Does Your Operation Qualify?</h2><p>Most commercial poultry houses meet our requirements</p></div>
+            <div class="qualify-grid">
+                <div class="qualify-card">
+                    <h3><svg viewBox="0 0 20 20" fill="#22c55e"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>Ideal Candidates</h3>
+                    <ul class="qualify-list yes">
+                        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>15,000+ sq ft of roof space</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Metal or structurally sound roof</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Roof less than 15 years old</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Minimal tree shading</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Pennsylvania location</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Property ownership (not leased land)</li>
+                    </ul>
+                </div>
+                <div class="qualify-card">
+                    <h3><svg viewBox="0 0 20 20" fill="#ef4444"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/></svg>May Not Qualify</h3>
+                    <ul class="qualify-list no">
+                        <li><svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>Roof under 10,000 sq ft</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>Roof needing major repairs</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>Heavy tree cover/shading</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>Leased/rented property</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>Outside Pennsylvania</li>
+                        <li><svg viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/></svg>Existing solar installation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <h2>Common Questions</h2>
+        <p class="faq-subtitle">Straight answers from Powerstream Solar & Electric</p>
+        
+        <div class="faq-accordion">
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     <span>What's the catch?</span>
@@ -136,37 +403,13 @@
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    <span>Why do you pay a lump sum instead of monthly?</span>
+                    <span>What happens at the end of 30 years?</span>
                     <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </button>
                 <div class="faq-answer">
-                    <p>Most farmers prefer immediate capital they can use now—pay off debt, invest in the operation, or create a safety net. We have financing partners who prefer long-term assets, so we can offer this upfront structure. It's a win-win.</p>
+                    <p>Three options: (1) We remove the system at our cost and restore your roof, (2) We extend the lease with a new payment, or (3) You purchase the system at fair market value and keep the power.</p>
                 </div>
             </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>How much will I actually receive?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>The $100,000 figure is typical for a standard 4-house broiler operation. Actual payment depends on total roof square footage, roof condition, shading, and grid connection capacity. Some operations receive more; smaller ones may receive less. We'll give you an exact quote after the free assessment.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Is this taxable income?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Yes, the lease payment is considered income. However, consult your accountant—there may be ways to structure this advantageously, especially if you have farm expenses to offset. We're not tax advisors, but we can connect you with agricultural accountants familiar with these arrangements.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-category">
-            <h2 class="faq-category-title">Your Property</h2>
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
@@ -175,26 +418,6 @@
                 </button>
                 <div class="faq-answer">
                     <p>We take full responsibility. Your roof is professionally inspected before installation. If our system ever causes a leak or damage, we fix it at our expense—guaranteed for the entire lease plus 2 years after removal.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Will the panels affect my chicken operation?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>No. The panels sit on top of your existing roof. There's no penetration into the building interior. Your ventilation, lighting, and daily operations continue exactly as before. Many farmers report the panels actually provide slight additional insulation.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>What about my roof warranty?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>We work with your existing roof warranty and our installation methods are designed to preserve it. If there's any conflict, our roof guarantee covers you for the entire lease term plus 2 years—often better coverage than the original warranty.</p>
                 </div>
             </div>
 
@@ -210,64 +433,6 @@
 
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
-                    <span>What if I need to replace my roof during the lease?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>We coordinate and pay for temporary panel removal and reinstallation. You pay for the roof work itself. We schedule around your flock cycles to minimize disruption.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-category">
-            <h2 class="faq-category-title">The Lease Terms</h2>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>What happens at the end of 15 years?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Three options: (1) We remove the system at our cost and restore your roof, (2) We extend the lease with a new payment, or (3) You purchase the system at fair market value and keep the power.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Can I get out of the lease early?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>The lease includes a buyout provision. After year 5, you can purchase the system at a predetermined declining price. Before year 5, early termination requires repayment of a prorated portion of the upfront payment.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Who owns the electricity the panels produce?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>We do. That's how we make our money—selling electricity to the grid and earning PA Solar Renewable Energy Credits (SRECs). Your payment is for the roof space lease, not the power generation.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Will this affect my property taxes?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Pennsylvania law exempts solar equipment from property tax assessment when owned by a third party (us). Your property taxes should not increase due to the solar installation.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-category">
-            <h2 class="faq-category-title">Risk & Protection</h2>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
                     <span>What if your company goes bankrupt?</span>
                     <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </button>
@@ -275,108 +440,135 @@
                     <p>Multiple protections: (1) $2M+ insurance policy names you as protected, (2) Removal bond guarantees system cleanup, (3) Our financing partners can step in and continue operations, (4) If truly abandoned, you can keep the system.</p>
                 </div>
             </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>What insurance do you carry?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>$2 million general liability, $1 million per occurrence. Your property is named as additionally insured. We also carry workers' comp for installation crews and equipment insurance for the panels themselves.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>What if the panels are damaged by a storm?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Our equipment insurance covers panel damage. We repair or replace at our cost. If your roof is damaged, our liability coverage pays for repairs. You're not responsible for any storm damage to the solar equipment.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Do I need to change my farm insurance?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Usually not, but you should notify your insurer about the installation. Most farm policies don't require changes since you don't own the equipment. We provide documentation to share with your insurance agent.</p>
-                </div>
-            </div>
         </div>
 
-        <div class="faq-category">
-            <h2 class="faq-category-title">The Process</h2>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>How long does installation take?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Typical installation is 2-4 weeks of active work, scheduled around your flock cycles. From signed contract to operational system is usually 60-90 days, including permits and utility interconnection.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>When do I get paid?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Full payment within 30 days of system commissioning (when the utility approves the grid connection). Some farmers request partial payment at contract signing—we can discuss options.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>Who handles permits and utility paperwork?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>We handle everything: building permits, electrical permits, utility interconnection applications, SREC registration. You sign a few authorization forms; we do the rest.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">
-                    <span>What maintenance is required?</span>
-                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>None from you. We monitor system performance remotely and handle all maintenance. If something needs attention, we schedule it around your operation. You literally do nothing for 15 years.</p>
-                </div>
-            </div>
-        </div>
-
-    </main>
+        <a href="/faq" class="faq-show-more">+ Show More Questions</a>
+    </section>
 
     <section class="cta-section">
-        <h2>Still Have Questions?</h2>
-        <p>Talk to a real person. No pressure, no salespeople—just straight answers.</p>
-        <div class="cta-buttons">
-            <a href="/#apply" class="cta-btn primary">Request Free Assessment</a>
-            <a href="tel:7177688500" class="cta-btn secondary">Call (717) 768-8500</a>
+        <div class="section-container">
+            <h2>Ready to Monetize Your Rooftop?</h2>
+            <p>Join Pennsylvania poultry operators who have turned unused roof space into $100,000+ in immediate capital.</p>
+            <div class="cta-buttons">
+                <a href="#apply" class="cta-btn primary">Request Free Assessment</a>
+                <a href="tel:7177688500" class="cta-btn secondary">Call (717) 768-8500</a>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-grid">
-            <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 15 years.</p><img src="logo.png" alt="Powerstream Solar & Electric" style="height: 45px; margin-top: 16px; filter: brightness(0) invert(1); opacity: 0.8;"></div>
+            <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 30 years.</p><img src="logo.png" alt="Powerstream Solar & Electric" style="height: 45px; margin-top: 16px; filter: brightness(0) invert(1); opacity: 0.8;"></div>
             <div class="footer-col"><h4>Service Area</h4><ul><li>Lancaster County</li><li>Chester County</li><li>Berks County</li><li>Lebanon County</li><li>All of Pennsylvania</li></ul></div>
             <div class="footer-col"><h4>Operations</h4><ul><li>Broiler Houses</li><li>Layer Facilities</li><li>Pullet Houses</li><li>Turkey Barns</li><li>Agricultural Buildings</li></ul></div>
-            <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7177688500">(717) 768-8500</a></li><li><a href="/cdn-cgi/l/email-protection#0e676068614e7d61626f7c7c616168626b6f7d6b206d6163"><span class="__cf_email__" data-cfemail="422b2c242d02312d2e2330302d2d242e272331276c212d2f">[email&#160;protected]</span></a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7177688500">(717) 768-8500</a></li><li><a href="/cdn-cgi/l/email-protection#2e474048416e5d41424f5c5c414148424b4f5d4b004d4143"><span class="__cf_email__" data-cfemail="93fafdf5fcd3e0fcfff2e1e1fcfcf5fff6f2e0f6bdf0fcfe">[email&#160;protected]</span></a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li></ul></div>
         </div>
-        <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div style="display: flex; gap: 16px;"><a href="/" style="color: rgba(255,255,255,0.7);">Back to Home</a><span style="color: rgba(255,255,255,0.5);">Site by <span style="color: #c9a227;">OG71</span></span></div></div>
+        <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div style="display: flex; gap: 16px;"><span>Market data from USDA</span><span>Site by <a href="#" style="color: var(--gold);">OG71</a></span></div></div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        document.querySelectorAll('.faq-question').forEach(function(button) {
-            button.addEventListener('click', function() {
-                var item = button.parentElement;
-                var isActive = item.classList.contains('active');
-                document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('active'); });
-                if (!isActive) {
-                    item.classLis
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBS8M679GR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QBS8M679GR');
+    </script>
+
+    <script>
+        (function() {
+            // Populate tracking fields
+            var params = new URLSearchParams(window.location.search);
+            document.getElementById('utm_source').value = params.get('utm_source') || '';
+            document.getElementById('utm_medium').value = params.get('utm_medium') || '';
+            document.getElementById('utm_campaign').value = params.get('utm_campaign') || '';
+            document.getElementById('referrer').value = document.referrer || 'direct';
+            document.getElementById('landing_page').value = window.location.href;
+
+            async function loadTicker() {
+                const ticker = document.getElementById('marketTicker');
+                try {
+                    const response = await fetch('prices.json');
+                    const data = await response.json();
+                    let html = '';
+                    data.items.forEach(function(item) {
+                        const change = item.change || '';
+                        let changeClass = 'neutral';
+                        if (change.charAt(0) === '+') changeClass = 'up';
+                        if (change.charAt(0) === '-') changeClass = 'down';
+                        html += '<div class="ticker-item"><span class="label">' + item.name + '</span><span class="value">' + item.price + '</span>' + (change ? '<span class="change ' + changeClass + '">' + change + '</span>' : '') + '</div>';
+                    });
+                    ticker.innerHTML = html + html;
+                } catch (e) {
+                    ticker.innerHTML = '<div class="ticker-item"><span class="label">Breast B/S</span><span class="value">$1.16/lb</span></div><div class="ticker-item"><span class="label">Leg Quarters</span><span class="value">$0.48/lb</span></div><div class="ticker-item"><span class="label">Wings</span><span class="value">$1.42/lb</span></div><div class="ticker-item"><span class="label">Drumsticks</span><span class="value">$0.54/lb</span></div><div class="ticker-item"><span class="label">Breast B/S</span><span class="value">$1.16/lb</span></div><div class="ticker-item"><span class="label">Leg Quarters</span><span class="value">$0.48/lb</span></div><div class="ticker-item"><span class="label">Wings</span><span class="value">$1.42/lb</span></div><div class="ticker-item"><span class="label">Drumsticks</span><span class="value">$0.54/lb</span></div>';
+                }
+            }
+
+            var form = document.getElementById('leadForm');
+            var submitBtn = document.getElementById('submitBtn');
+
+            form.addEventListener('submit', function() {
+                submitBtn.textContent = 'Submitting...';
+                submitBtn.disabled = true;
+                // Track form submission in GA
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'form',
+                        'event_label': 'roof_assessment'
+                    });
+                }
+            });
+
+            document.getElementById('phone').addEventListener('input', function(e) {
+                var v = e.target.value.replace(/\D/g, '');
+                if (v.length >= 6) v = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6,10);
+                else if (v.length >= 3) v = '(' + v.slice(0,3) + ') ' + v.slice(3);
+                e.target.value = v;
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+                a.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var t = document.querySelector(this.getAttribute('href'));
+                    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-question').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var item = button.parentElement;
+                    var isActive = item.classList.contains('active');
+                    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('active'); });
+                    if (!isActive) {
+                        item.classList.add('active');
+                        button.setAttribute('aria-expanded', 'true');
+                    } else {
+                        button.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            // Payment Calculator Slider
+            var slider = document.getElementById('roofSize');
+            var paymentDisplay = document.getElementById('paymentAmount');
+            var sizeDisplay = document.getElementById('sizeDisplay');
+            var hiddenSqft = document.getElementById('estimated_sqft');
+            var hiddenPayment = document.getElementById('estimated_payment');
+            
+            slider.addEventListener('input', function() {
+                var sqft = parseInt(this.value);
+                var payment = sqft * 2;
+                var paymentStr = '$' + payment.toLocaleString();
+                paymentDisplay.textContent = paymentStr;
+                hiddenSqft.value = sqft;
+                hiddenPayment.value = paymentStr;
+                sizeDisplay.textContent = sqft.toLocaleString() + ' sq ft';
+            });
+
+            // Load ticker on page load
+            loadTicker();
+        })();
+    </script>
+</body>
+</html>
