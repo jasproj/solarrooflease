@@ -82,6 +82,16 @@
         .submit-btn:hover { background: var(--forest-dark); }
         .form-footer { text-align: center; margin-top: 16px; font-size: 12px; color: var(--slate); }
 
+        .payment-calculator { background: var(--light-gray); border-radius: 8px; padding: 20px; margin-bottom: 24px; }
+        .payment-calculator label { display: block; font-size: 13px; font-weight: 600; color: var(--charcoal); margin-bottom: 8px; text-align: center; }
+        .slider-value { text-align: center; margin-bottom: 12px; }
+        .slider-value span { font-size: 36px; font-weight: 800; color: var(--forest); }
+        .payment-calculator input[type="range"] { width: 100%; height: 8px; border-radius: 4px; background: #d1d5db; outline: none; -webkit-appearance: none; cursor: pointer; }
+        .payment-calculator input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: var(--forest); cursor: pointer; border: 3px solid var(--white); box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+        .payment-calculator input[type="range"]::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: var(--forest); cursor: pointer; border: 3px solid var(--white); box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+        .slider-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--slate); margin-top: 8px; }
+        .slider-labels span:nth-child(2) { font-weight: 600; color: var(--charcoal); }
+
         .industry-stats { background: linear-gradient(rgba(26, 77, 46, 0.85), rgba(15, 51, 32, 0.9)), url('farm-aerial.jpg') center/cover no-repeat; padding: 60px 24px; }
         .industry-stats .section-header h2 { color: var(--white); }
         .industry-stats .section-header p { color: rgba(255,255,255,0.8); }
@@ -255,6 +265,18 @@
             </div>
             <div class="hero-form-wrap" id="apply">
                 <div class="hero-form-header"><h2>Free Roof Assessment</h2><p>See if your operation qualifies</p></div>
+                
+                <div class="payment-calculator">
+                    <label for="systemSize">Estimate Your Payment</label>
+                    <div class="slider-value"><span id="paymentAmount">$100,000</span></div>
+                    <input type="range" id="systemSize" min="250" max="2000" value="1000" step="50">
+                    <div class="slider-labels">
+                        <span>250 kW</span>
+                        <span id="sizeDisplay">1,000 kW (1 MW)</span>
+                        <span>2,000 kW</span>
+                    </div>
+                </div>
+
                 <form class="lead-form" id="leadForm" action="https://formspree.io/f/mzdzrpbb" method="POST">
                     <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="John Miller" required></div>
                     <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(717) 555-1234" required></div>
@@ -270,6 +292,8 @@
                     <input type="hidden" name="utm_campaign" id="utm_campaign">
                     <input type="hidden" name="referrer" id="referrer">
                     <input type="hidden" name="landing_page" id="landing_page">
+                    <input type="hidden" name="estimated_system_kw" id="estimated_system_kw" value="1000">
+                    <input type="hidden" name="estimated_payment" id="estimated_payment" value="$100,000">
                     <input type="hidden" name="lead_source" value="solarrooflease.com">
                     <button type="submit" class="submit-btn" id="submitBtn">Request Free Assessment</button>
                     <div class="form-footer">No obligation • Response within 24 hours</div>
@@ -288,7 +312,7 @@
             <div class="stats-grid">
                 <div class="stat-card"><div class="stat-card-icon"><svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg></div><div class="stat-card-value">July 2026</div><div class="stat-card-label">Safe Harbor Deadline</div></div>
                 <div class="stat-card"><div class="stat-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/></svg></div><div class="stat-card-value">30%</div><div class="stat-card-label">Federal Tax Credit</div></div>
-                <div class="stat-card"><div class="stat-card-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg></div><div class="stat-card-value">$35</div><div class="stat-card-label">PA SREC Value</div></div>
+                <div class="stat-card"><div class="stat-card-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg></div><div class="stat-card-value">$20</div><div class="stat-card-label">PA SREC Value</div></div>
                 <div class="stat-card"><div class="stat-card-icon"><svg viewBox="0 0 24 24"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div><div class="stat-card-value">$100K+</div><div class="stat-card-label">Your Lump Sum Payment</div></div>
             </div>
         </div>
@@ -521,6 +545,27 @@
                         button.setAttribute('aria-expanded', 'false');
                     }
                 });
+            });
+
+            // Payment Calculator Slider
+            var slider = document.getElementById('systemSize');
+            var paymentDisplay = document.getElementById('paymentAmount');
+            var sizeDisplay = document.getElementById('sizeDisplay');
+            var hiddenKw = document.getElementById('estimated_system_kw');
+            var hiddenPayment = document.getElementById('estimated_payment');
+            
+            slider.addEventListener('input', function() {
+                var kw = parseInt(this.value);
+                var payment = (kw / 1000) * 100000;
+                var paymentStr = '$' + payment.toLocaleString();
+                paymentDisplay.textContent = paymentStr;
+                hiddenKw.value = kw;
+                hiddenPayment.value = paymentStr;
+                if (kw >= 1000) {
+                    sizeDisplay.textContent = kw.toLocaleString() + ' kW (' + (kw/1000) + ' MW)';
+                } else {
+                    sizeDisplay.textContent = kw.toLocaleString() + ' kW';
+                }
             });
 
             // Load ticker on page load
