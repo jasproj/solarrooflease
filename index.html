@@ -43,8 +43,9 @@
         .logo img { height: 50px; width: auto; }
         .logo-tagline { margin-left: 12px; font-size: 14px; font-weight: 600; color: var(--forest); letter-spacing: 0.5px; }
         .header-contact { display: flex; align-items: center; gap: 24px; }
-        .header-schedule { color: var(--forest); text-decoration: none; font-weight: 600; font-size: 14px; padding: 10px 20px; border: 2px solid var(--forest); border-radius: 6px; transition: all 0.2s; }
+        .header-schedule { color: var(--forest); text-decoration: none; font-weight: 600; font-size: 14px; padding: 10px 20px; border: 2px solid var(--forest); border-radius: 6px; transition: all 0.2s; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
         .header-schedule:hover { background: var(--forest); color: var(--white); }
+        .header-schedule:active { background: var(--forest); color: var(--white); }
         .header-cta { background: var(--forest); color: var(--white); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.2s; }
         .header-cta:hover { background: var(--forest-dark); }
         .header-investor { color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
@@ -72,7 +73,7 @@
         .hero-stat-value { font-size: 28px; font-weight: 700; color: var(--gold); }
         .hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; }
 
-        .hero-form-wrap { background: var(--white); border-radius: 12px; padding: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        .hero-form-wrap { background: var(--white); border-radius: 12px; padding: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); scroll-margin-top: 80px; }
         .hero-form-header { text-align: center; margin-bottom: 24px; }
         .hero-form-header h2 { font-size: 26px; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
         .hero-form-header p { font-size: 14px; color: var(--slate); }
@@ -101,14 +102,15 @@
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center; }
         .modal-overlay.active { display: flex; }
         .modal-content { background: var(--white); border-radius: 12px; padding: 40px; max-width: 450px; width: 90%; position: relative; }
-        .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--slate); line-height: 1; }
-        .modal-close:hover { color: var(--charcoal); }
+        .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--slate); line-height: 1; padding: 8px; -webkit-tap-highlight-color: transparent; }
+        .modal-close:hover, .modal-close:active { color: var(--charcoal); }
         .modal-content h2 { font-size: 24px; margin-bottom: 8px; color: var(--charcoal); }
         .modal-content p { font-size: 14px; color: var(--slate); margin-bottom: 24px; }
         .modal-form .form-group { margin-bottom: 16px; }
         .modal-form label { display: block; font-size: 13px; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
         .modal-form input, .modal-form select { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; }
         .modal-form input:focus, .modal-form select:focus { outline: none; border-color: var(--forest); box-shadow: 0 0 0 3px rgba(26, 77, 46, 0.1); }
+        @media (max-width: 640px) { .modal-content { padding: 24px; margin: 16px; } .modal-content h2 { font-size: 20px; } }
 
         .industry-stats { background: linear-gradient(rgba(26, 77, 46, 0.85), rgba(15, 51, 32, 0.9)), url('farm-aerial.jpg') center/cover no-repeat; padding: 60px 24px; }
         .industry-stats .section-header h2 { color: var(--white); }
@@ -196,11 +198,11 @@
         .cta-section h2 { font-size: 36px; font-weight: 700; margin-bottom: 16px; }
         .cta-section p { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
         .cta-buttons { display: flex; justify-content: center; gap: 16px; }
-        .cta-btn { padding: 16px 32px; border-radius: 6px; font-size: 16px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .cta-btn { padding: 16px 32px; border-radius: 6px; font-size: 16px; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
         .cta-btn.primary { background: var(--gold); color: var(--charcoal); }
-        .cta-btn.primary:hover { background: var(--gold-light); }
+        .cta-btn.primary:hover, .cta-btn.primary:active { background: var(--gold-light); }
         .cta-btn.secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
-        .cta-btn.secondary:hover { background: var(--white); color: var(--forest); }
+        .cta-btn.secondary:hover, .cta-btn.secondary:active { background: var(--white); color: var(--forest); }
 
         .footer { background: var(--charcoal); padding: 48px 24px 24px; color: rgba(255,255,255,0.7); }
         .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
@@ -209,8 +211,8 @@
         .footer-col h4 { font-size: 14px; font-weight: 600; color: var(--white); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
         .footer-col ul { list-style: none; }
         .footer-col ul li { margin-bottom: 10px; font-size: 14px; }
-        .footer-col ul li a { color: rgba(255,255,255,0.7); text-decoration: none; }
-        .footer-col ul li a:hover { color: var(--white); }
+        .footer-col ul li a { color: rgba(255,255,255,0.7); text-decoration: none; -webkit-tap-highlight-color: transparent; }
+        .footer-col ul li a:hover, .footer-col ul li a:active { color: var(--white); }
         .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 13px; }
 
         .success-message { display: none; text-align: center; padding: 40px 20px; }
@@ -475,7 +477,7 @@
             <div class="footer-brand"><h3>Powerstream Solar & Electric</h3><p>We partner with Pennsylvania poultry operations to install solar on chicken house rooftops. Property owners receive a lump-sum payment; we handle installation, maintenance, and all risk for 30 years.</p><img src="logo.png" alt="Powerstream Solar & Electric" style="height: 45px; margin-top: 16px; filter: brightness(0) invert(1); opacity: 0.8;"></div>
             <div class="footer-col"><h4>Service Area</h4><ul><li>Lancaster County</li><li>Chester County</li><li>Berks County</li><li>Lebanon County</li><li>All of Pennsylvania</li></ul></div>
             <div class="footer-col"><h4>Operations</h4><ul><li>Broiler Houses</li><li>Layer Facilities</li><li>Pullet Houses</li><li>Turkey Barns</li><li>Agricultural Buildings</li></ul></div>
-            <div class="footer-col"><h4>Contact</h4><ul><li><a href="#schedule">Schedule a Call</a></li><li><a href="/cdn-cgi/l/email-protection#d3babdb5bc93a0bcbfb2a1a1bcbcb5bfb6b2a0b6fdb0bcbe"><span class="__cf_email__" data-cfemail="a4cdcac2cbe4d7cbc8c5d6d6cbcbc2c8c1c5d7c18ac7cbc9">[email&#160;protected]</span></a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li><li><a href="/investors">Investor Relations</a></li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul><li><a href="#schedule">Schedule a Call</a></li><li><a href="mailto:info@solarrooflease.com">info@solarrooflease.com</a></li><li>126 Meetinghouse Rd, Gap, PA 17527</li><li><a href="/investors">Investor Relations</a></li></ul></div>
         </div>
         <div class="footer-bottom"><div>© 2025 Powerstream Solar & Electric. PA HIC License #113179. All rights reserved.</div><div style="display: flex; gap: 16px;"><span>Market data from USDA</span><span>Site by <a href="#" style="color: var(--gold);">OG71</a></span></div></div>
     </footer>
@@ -501,7 +503,7 @@
     </div>
 
     <!-- Google tag (gtag.js) -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-QBS8M679GR"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBS8M679GR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -562,9 +564,18 @@
 
             document.querySelectorAll('a[href^="#"]').forEach(function(a) {
                 a.addEventListener('click', function(e) {
+                    var href = this.getAttribute('href');
+                    if (href === '#schedule') return; // Modal handles this
                     e.preventDefault();
-                    var t = document.querySelector(this.getAttribute('href'));
-                    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    var t = document.querySelector(href);
+                    if (t) {
+                        // On mobile, scroll to hero section instead of just the form
+                        if (href === '#apply' && window.innerWidth < 768) {
+                            document.querySelector('.hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else {
+                            t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
                 });
             });
 
@@ -608,24 +619,35 @@
             var modalClose = document.getElementById('modalClose');
             var scheduleLinks = document.querySelectorAll('a[href="#schedule"]');
             
+            var modalOpened = false;
+            function openModal(e) {
+                if (modalOpened) return;
+                modalOpened = true;
+                e.preventDefault();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                // Copy UTM params to modal form
+                document.getElementById('schedule_utm_source').value = params.get('utm_source') || '';
+                document.getElementById('schedule_utm_medium').value = params.get('utm_medium') || '';
+                document.getElementById('schedule_utm_campaign').value = params.get('utm_campaign') || '';
+                setTimeout(function() { modalOpened = false; }, 300);
+            }
+            
             scheduleLinks.forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    modal.classList.add('active');
-                    // Copy UTM params to modal form
-                    document.getElementById('schedule_utm_source').value = params.get('utm_source') || '';
-                    document.getElementById('schedule_utm_medium').value = params.get('utm_medium') || '';
-                    document.getElementById('schedule_utm_campaign').value = params.get('utm_campaign') || '';
-                });
+                link.addEventListener('click', openModal);
+                link.addEventListener('touchend', openModal);
             });
             
-            modalClose.addEventListener('click', function() {
+            function closeModal() {
                 modal.classList.remove('active');
-            });
+                document.body.style.overflow = '';
+            }
+            
+            modalClose.addEventListener('click', closeModal);
             
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) {
-                    modal.classList.remove('active');
+                    closeModal();
                 }
             });
 
@@ -635,3 +657,13 @@
                 scheduleSubmitBtn.textContent = 'Submitting...';
                 scheduleSubmitBtn.disabled = true;
                 if (typeof gtag !== 'undefined') {
+                    gtag('event', 'schedule_call', {
+                        'event_category': 'form',
+                        'event_label': 'schedule_call_request'
+                    });
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
