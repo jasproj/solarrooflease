@@ -52,7 +52,7 @@
         @media (max-width: 768px) { .header-investor { display: none; } }
 
         .hero { background: linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%); padding: 80px 24px; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); animation: heroDrift 120s linear infinite; }
+        .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px); background-size: 24px 24px; z-index: 0; pointer-events: none; animation: heroDrift 120s linear infinite; }
         @keyframes heroDrift {
             0% { transform: translate(0, 0); }
             100% { transform: translate(50%, 50%); }
@@ -255,7 +255,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <div class="hero-badge">Commercial Poultry Operations</div>
+                <div class="hero-badge">Solar Chicken House Roof Lease</div>
                 <h1>One Payment at Closing.<br><span class="hero-today">30 Years. We Handle Everything.</span></h1>
                 <p class="hero-sub">Approximately $2 per square foot, paid in full at installation. One check. 30-year lease. We take responsibility from there.</p>
                 <div class="hero-benefits">
@@ -337,11 +337,11 @@
                     </ul>
                 </div>
                 <div class="comparison-table">
-                    <div class="comparison-header"><div>Timeline</div><div>Our Offer</div><div>Industry Standard</div></div>
-                    <div class="comparison-row"><div>Upfront Payment</div><div class="highlight">$100,000</div><div class="dim">$0</div></div>
-                    <div class="comparison-row"><div>Year 1 Total</div><div class="highlight">$100,000</div><div class="dim">~$25,000</div></div>
-                    <div class="comparison-row"><div>Year 4 Total</div><div class="highlight">$100,000</div><div class="dim">~$100,000</div></div>
-                    <div class="comparison-row"><div>Your Risk</div><div class="highlight">Ours, not yours</div><div class="dim">Payment depends on production</div></div>
+                    <div class="comparison-header"><div></div><div>Our Offer</div><div>Industry Standard</div></div>
+                    <div class="comparison-row"><div>When You Get Paid</div><div class="highlight">At commissioning</div><div class="dim">Over 15-30 years</div></div>
+                    <div class="comparison-row"><div>Payment Certainty</div><div class="highlight">Guaranteed</div><div class="dim">Depends on production</div></div>
+                    <div class="comparison-row"><div>Your Involvement</div><div class="highlight">None</div><div class="dim">Monitor & manage</div></div>
+                    <div class="comparison-row"><div>Risk</div><div class="highlight">We carry it</div><div class="dim">You carry it</div></div>
                 </div>
             </div>
         </div>
@@ -361,7 +361,7 @@
 
     <section class="qualify-section">
         <div class="section-container">
-            <div class="section-header"><h2>Does Your Roof Qualify?</h2><p>Most commercial poultry houses meet our requirements</p></div>
+            <div class="section-header"><h2>Does Your Roof Qualify?</h2><p>Most chicken house roofs meet our requirements</p></div>
             <div class="qualify-grid">
                 <div class="qualify-card">
                     <h3><svg viewBox="0 0 20 20" fill="#22c55e"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>Ideal Candidates</h3>
@@ -450,7 +450,7 @@
 
     <section class="cta-section">
         <div class="section-container">
-            <h2>Ready to Monetize Your Rooftop?</h2>
+            <h2>Ready To Turn Your Roof Into Cash?</h2>
             <p>Join Pennsylvania poultry operators who have turned unused roof space into $100,000+ in immediate capital.</p>
             <div class="cta-buttons">
                 <a href="#apply" class="cta-btn primary">Request Free Assessment</a>
