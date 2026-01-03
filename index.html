@@ -91,6 +91,7 @@
         .payment-calculator input[type="range"]::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: var(--forest); cursor: pointer; border: 3px solid var(--white); box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
         .slider-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--slate); margin-top: 8px; }
         .slider-labels span:nth-child(2) { font-weight: 600; color: var(--charcoal); }
+        .calculator-disclaimer { font-size: 11px; color: var(--slate); text-align: center; margin-top: 12px; font-style: italic; }
 
         .industry-stats { background: linear-gradient(rgba(26, 77, 46, 0.85), rgba(15, 51, 32, 0.9)), url('farm-aerial.jpg') center/cover no-repeat; padding: 60px 24px; }
         .industry-stats .section-header h2 { color: var(--white); }
@@ -267,14 +268,15 @@
                 <div class="hero-form-header"><h2>Free Roof Assessment</h2><p>See if your operation qualifies</p></div>
                 
                 <div class="payment-calculator">
-                    <label for="systemSize">Estimate Your Payment</label>
+                    <label for="roofSize">Estimate Your Payment</label>
                     <div class="slider-value"><span id="paymentAmount">$100,000</span></div>
-                    <input type="range" id="systemSize" min="250" max="2000" value="1000" step="50">
+                    <input type="range" id="roofSize" min="15000" max="100000" value="50000" step="5000">
                     <div class="slider-labels">
-                        <span>250 kW</span>
-                        <span id="sizeDisplay">1,000 kW (1 MW)</span>
-                        <span>2,000 kW</span>
+                        <span>15,000 sq ft</span>
+                        <span id="sizeDisplay">50,000 sq ft</span>
+                        <span>100,000 sq ft</span>
                     </div>
+                    <p class="calculator-disclaimer">*Estimate only. Final payment based on site assessment.</p>
                 </div>
 
                 <form class="lead-form" id="leadForm" action="https://formspree.io/f/mzdzrpbb" method="POST">
@@ -292,7 +294,7 @@
                     <input type="hidden" name="utm_campaign" id="utm_campaign">
                     <input type="hidden" name="referrer" id="referrer">
                     <input type="hidden" name="landing_page" id="landing_page">
-                    <input type="hidden" name="estimated_system_kw" id="estimated_system_kw" value="1000">
+                    <input type="hidden" name="estimated_sqft" id="estimated_sqft" value="50000">
                     <input type="hidden" name="estimated_payment" id="estimated_payment" value="$100,000">
                     <input type="hidden" name="lead_source" value="solarrooflease.com">
                     <button type="submit" class="submit-btn" id="submitBtn">Request Free Assessment</button>
@@ -548,24 +550,20 @@
             });
 
             // Payment Calculator Slider
-            var slider = document.getElementById('systemSize');
+            var slider = document.getElementById('roofSize');
             var paymentDisplay = document.getElementById('paymentAmount');
             var sizeDisplay = document.getElementById('sizeDisplay');
-            var hiddenKw = document.getElementById('estimated_system_kw');
+            var hiddenSqft = document.getElementById('estimated_sqft');
             var hiddenPayment = document.getElementById('estimated_payment');
             
             slider.addEventListener('input', function() {
-                var kw = parseInt(this.value);
-                var payment = (kw / 1000) * 100000;
+                var sqft = parseInt(this.value);
+                var payment = sqft * 2;
                 var paymentStr = '$' + payment.toLocaleString();
                 paymentDisplay.textContent = paymentStr;
-                hiddenKw.value = kw;
+                hiddenSqft.value = sqft;
                 hiddenPayment.value = paymentStr;
-                if (kw >= 1000) {
-                    sizeDisplay.textContent = kw.toLocaleString() + ' kW (' + (kw/1000) + ' MW)';
-                } else {
-                    sizeDisplay.textContent = kw.toLocaleString() + ' kW';
-                }
+                sizeDisplay.textContent = sqft.toLocaleString() + ' sq ft';
             });
 
             // Load ticker on page load
