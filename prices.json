@@ -1,55 +1,55 @@
 {
-  "updated": "2026-01-03T21:47:56",
+  "updated": "2026-01-09T22:16:38",
   "source": "USDA AMS Weekly National Chicken Report",
-  "report_date": "12/29/2025",
+  "report_date": "01/05/2026",
   "items": [
     {
       "name": "Breast - B/S",
-      "price": "$1.17/lb",
-      "raw_cents": 117.33,
-      "change": "+1.4%"
+      "price": "$1.19/lb",
+      "raw_cents": 118.89,
+      "change": "+1.3%"
     },
     {
       "name": "Drumsticks",
-      "price": "$0.55/lb",
-      "raw_cents": 54.51,
-      "change": "+1.7%"
+      "price": "$0.53/lb",
+      "raw_cents": 53.41,
+      "change": "-2.0%"
     },
     {
       "name": "Thighs - B/S",
-      "price": "$1.23/lb",
-      "raw_cents": 122.66,
-      "change": "+0.7%"
+      "price": "$1.26/lb",
+      "raw_cents": 126.07,
+      "change": "+2.8%"
     },
     {
       "name": "Backs and Necks St",
-      "price": "$0.09/lb",
-      "raw_cents": 9.35,
-      "change": "+4.1%"
+      "price": "$0.07/lb",
+      "raw_cents": 6.7,
+      "change": "-28.3%"
     },
     {
       "name": "Breast - Line Run",
-      "price": "$0.76/lb",
-      "raw_cents": 76.19,
-      "change": "-2.5%"
+      "price": "$0.79/lb",
+      "raw_cents": 78.62,
+      "change": "+3.2%"
     },
     {
       "name": "Breast With Ribs",
-      "price": "$1.38/lb",
-      "raw_cents": 137.8,
-      "change": "+0.2%"
+      "price": "$1.39/lb",
+      "raw_cents": 138.74,
+      "change": "+0.7%"
     },
     {
       "name": "Frames",
-      "price": "$0.05/lb",
-      "raw_cents": 5.1,
-      "change": "+5.4%"
+      "price": "$0.06/lb",
+      "raw_cents": 5.86,
+      "change": "+14.9%"
     },
     {
       "name": "Gizzards and Heart",
-      "price": "$0.87/lb",
-      "raw_cents": 87.04,
-      "change": "-3.0%"
+      "price": "$0.86/lb",
+      "raw_cents": 86.05,
+      "change": "-1.1%"
     }
   ]
 }
