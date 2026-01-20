@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Go 100% Solar Without Panels | Solar Roof Lease</title>
     <meta name="description" content="Power your SE Pennsylvania business with local solar energy — without installing a single panel. Virtual offsets from nearby warehouse rooftops and brownfields.">
+    
+    <!-- Open Graph / Facebook / Messenger -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solarrooflease.com/go-green.html">
+    <meta property="og:title" content="Go 100% Solar — Without Touching Your Building">
+    <meta property="og:description" content="Power your PA business with clean energy from local rooftops. No panels, no construction, no upfront cost. Get matched to solar capacity in Lancaster, Berks, Chester & Montgomery counties.">
+    <meta property="og:image" content="https://solarrooflease.com/og-go-green.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Go 100% Solar — Without Touching Your Building">
+    <meta name="twitter:description" content="Power your PA business with clean energy from local rooftops. No panels, no construction, no upfront cost.">
+    <meta name="twitter:image" content="https://solarrooflease.com/og-go-green.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,10 +43,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: rgba(45, 106, 79, 0.1);
         }
 
         html {
             scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
         }
 
         body {
@@ -548,10 +565,11 @@
             padding: 14px 16px;
             border: 2px solid var(--border);
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 16px; /* Prevents iOS zoom on focus */
             font-family: inherit;
             transition: border-color 0.2s, box-shadow 0.2s;
             background: var(--white);
+            min-height: 48px; /* Touch target */
         }
 
         .form-group input:focus,
@@ -776,6 +794,24 @@
             .form-row {
                 grid-template-columns: 1fr;
                 gap: 16px;
+            }
+
+            /* Mobile touch targets - minimum 44px */
+            .btn {
+                min-height: 48px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                min-height: 48px;
+                font-size: 16px; /* Prevents iOS zoom on focus */
+            }
+
+            .nav-cta {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
             }
 
             .footer-container {
