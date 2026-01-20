@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host Solar on Your Property | Solar Roof Lease</title>
+    <meta name="description" content="Own a warehouse, brownfield, or commercial property in SE Pennsylvania? Your roof could qualify for PA's new solar incentives. Free site assessment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2D6A4F;
+            --primary-dark: #1B4332;
+            --primary-light: #40916C;
+            --secondary: #343A40;
+            --accent: #F9C74F;
+            --accent-hover: #F4B942;
+            --background: #FDFBF7;
+            --background-alt: #F4F1EB;
+            --text: #1E1E1E;
+            --text-muted: #5A5A5A;
+            --white: #FFFFFF;
+            --border: #E0DCD4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 80px 24px 100px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--text);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 64px 24px;
+        }
+
+        .section {
+            margin-bottom: 56px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+        }
+
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .benefit-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--white);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .benefit-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+        /* Qualifying Sites */
+        .qualifying-section {
+            background: var(--background-alt);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 56px;
+        }
+
+        .qualifying-section h2 {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .site-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .site-type {
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .site-type:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .site-type-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .site-type-name {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .site-type-note {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* How It Works */
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: var(--secondary);
+        }
+
+        .step-content p {
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        /* Revenue Options */
+        .revenue-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .revenue-card {
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            position: relative;
+        }
+
+        .revenue-card.featured {
+            border-color: var(--primary);
+        }
+
+        .revenue-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 24px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .revenue-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--secondary);
+        }
+
+        .revenue-card p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .revenue-card ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .revenue-card li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        .revenue-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Lead Capture Form */
+        .form-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 80px 24px;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .form-header h2 {
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            font-size: 2rem;
+        }
+
+        .form-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .lead-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--secondary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #999;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23343A40' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-large {
+            padding: 18px 36px;
+            font-size: 18px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .form-disclaimer {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--background-alt);
+            padding: 64px 24px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-dark);
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            font-weight: 600;
+            color: var(--secondary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            padding: 0 24px 20px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 40px 24px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-family: 'Fraunces', serif;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-toggle svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 60px 20px 80px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .content {
+                padding: 48px 20px;
+            }
+
+            .section h2 {
+                font-size: 1.6rem;
+            }
+
+            .qualifying-section {
+                padding: 28px 20px;
+            }
+
+            .revenue-options {
+                grid-template-columns: 1fr;
+            }
+
+            .form-section {
+                padding: 60px 16px;
+            }
+
+            .form-container {
+                padding: 32px 24px;
+            }
+
+            .form-header h2 {
+                font-size: 1.6rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
+                </div>
+                Solar Roof Lease
+            </a>
+            <ul class="nav-links">
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#qualifying">Qualifying Sites</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="/sb1019">SB 1019</a></li>
+            </ul>
+            <a href="#get-started" class="nav-cta">Free Assessment</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-badge">PA Senate Bill 1019</div>
+            <h1>Your Property Could Be<br><span>Generating Solar Revenue</span></h1>
+            <p class="hero-subtitle">Own a warehouse, brownfield, or commercial building in Southeast PA? New state legislation creates preferred status for solar on sites like yours — with full retail-rate credits.</p>
+            <div class="hero-actions">
+                <a href="#get-started" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    Get Free Site Assessment
+                </a>
+                <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Benefits Section -->
+        <section class="section" id="benefits">
+            <h2>Why Host Solar on Your Property?</h2>
+            <p>PA Senate Bill 1019 creates a protected class of solar sites — and your property may qualify for benefits that standard commercial solar can't access.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                    </div>
+                    <h3>Full Retail-Rate Credits</h3>
+                    <p>SB 1019 locks in net metering at retail rates through 2050 — not the lower wholesale rates utilities are pushing for.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                    </div>
+                    <h3>Protected Status</h3>
+                    <p>Qualifying sites get "preferred" designation — shielded from the utility rate reclassification battles that killed other projects.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <h3>Zero Upfront Cost</h3>
+                    <p>We handle design, permitting, and installation. You provide the roof — we provide everything else.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                    </div>
+                    <h3>Multiple Revenue Options</h3>
+                    <p>Use the power yourself, sell virtual offsets to local businesses, or negotiate a roof lease. Your choice.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qualifying Sites -->
+        <div class="qualifying-section" id="qualifying">
+            <h2>Does Your Property Qualify?</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 28px;">SB 1019 grants preferred status to these specific site types:</p>
+            
+            <div class="site-types">
+                <div class="site-type">
+                    <div class="site-type-icon">🏭</div>
+                    <div class="site-type-name">Warehouse Rooftops</div>
+                    <div class="site-type-note">Distribution centers, fulfillment</div>
+                </div>
+                <div class="site-type">
+                    <div class="site-type-icon">🏚️</div>
+                    <div class="site-type-name">Brownfields</div>
+                    <div class="site-type-note">Former industrial sites</div>
+                </div>
+                <div class="site-type">
+                    <div class="site-type-icon">🅿️</div>
+                    <div class="site-type-name">Parking Canopies</div>
+                    <div class="site-type-note">Garages, surface lots</div>
+                </div>
+                <div class="site-type">
+                    <div class="site-type-icon">⛏️</div>
+                    <div class="site-type-name">Abandoned Minelands</div>
+                    <div class="site-type-note">Reclaimed mining areas</div>
+                </div>
+                <div class="site-type">
+                    <div class="site-type-icon">🏫</div>
+                    <div class="site-type-name">School Buildings</div>
+                    <div class="site-type-note">K-12, community colleges</div>
+                </div>
+                <div class="site-type">
+                    <div class="site-type-icon">🗑️</div>
+                    <div class="site-type-name">Capped Landfills</div>
+                    <div class="site-type-note">Closed, remediated sites</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <section class="section" id="how-it-works">
+            <h2>How It Works</h2>
+            <p>From assessment to activation in 4 steps — we handle the complexity so you don't have to.</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Free Site Assessment</h3>
+                        <p>We analyze your property's solar potential, roof condition, interconnection options, and SB 1019 eligibility. Takes 5-7 business days.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Custom Proposal</h3>
+                        <p>You'll receive a detailed proposal showing system size, projected generation, revenue scenarios, and financing options.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Design & Permitting</h3>
+                        <p>Our engineering team handles system design, utility interconnection, and all municipal permits. Typical timeline: 60-90 days.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Installation & Activation</h3>
+                        <p>Professional installation by our certified partner Powerstream. System goes live once utility grants permission to operate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Revenue Options -->
+        <section class="section">
+            <h2>Choose Your Revenue Model</h2>
+            <p>Not every property owner wants the same thing. We offer flexibility based on your goals.</p>
+            
+            <div class="revenue-options">
+                <div class="revenue-card featured">
+                    <h3>Virtual Offset Sales</h3>
+                    <p>Let your roof power local businesses going green — without touching your own operations.</p>
+                    <ul>
+                        <li>Steady monthly revenue stream</li>
+                        <li>No change to your utility bill</li>
+                        <li>We find and manage the buyers</li>
+                        <li>Long-term contracts available</li>
+                    </ul>
+                </div>
+                <div class="revenue-card">
+                    <h3>Self-Consumption</h3>
+                    <p>Use the power yourself and slash your electricity costs directly.</p>
+                    <ul>
+                        <li>Offset your own usage first</li>
+                        <li>Sell excess back at retail rate</li>
+                        <li>Hedge against rate increases</li>
+                        <li>Maximize ROI for high-usage sites</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lead Capture Form -->
+    <section class="form-section" id="get-started">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Get Your Free Site Assessment</h2>
+                <p>Find out if your property qualifies — and what it could earn. No cost, no obligation.</p>
+            </div>
+            <form action="https://formspree.io/f/mlggpdyo" method="POST" class="lead-form">
+                <input type="hidden" name="_subject" value="Host Site Lead - Solar Roof Lease">
+                <input type="hidden" name="lead_type" value="host-site">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company / Organization *</label>
+                        <input type="text" id="company" name="company" required placeholder="Property owner or manager">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="site_type">Property Type *</label>
+                        <select id="site_type" name="site_type" required>
+                            <option value="">Select property type</option>
+                            <option value="warehouse">Warehouse / Distribution Center</option>
+                            <option value="brownfield">Brownfield / Former Industrial</option>
+                            <option value="parking">Parking Garage / Surface Lot</option>
+                            <option value="school">School / Educational Facility</option>
+                            <option value="landfill">Capped Landfill</option>
+                            <option value="mineland">Abandoned Mineland</option>
+                            <option value="other">Other Commercial Property</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="county">County *</label>
+                        <select id="county" name="county" required>
+                            <option value="">Select your county</option>
+                            <option value="Lancaster">Lancaster</option>
+                            <option value="Berks">Berks</option>
+                            <option value="Chester">Chester</option>
+                            <option value="Montgomery">Montgomery</option>
+                            <option value="Other PA">Other PA County</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Tell us about your property</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Approximate roof/land size, age of building, current electricity usage, or any questions..."></textarea>
+                </div>
+
+                <!-- Honeypot spam protection - bots fill this, humans don't see it -->
+                <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+
+                <button type="submit" class="btn btn-primary btn-large">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    Get My Free Assessment
+                </button>
+                
+                <p class="form-disclaimer">We'll reach out within 1 business day. Your info stays private — we never sell or share it.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">What does "preferred status" under SB 1019 actually mean?</div>
+                <div class="faq-answer">It means your solar system gets locked into net metering at full retail electricity rates through 2050 — unlike standard commercial systems that utilities are trying to reclassify to lower wholesale rates. This protection is only available to specific site types listed in the bill.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What's the minimum roof size you work with?</div>
+                <div class="faq-answer">Generally 20,000+ square feet makes a project economically viable, but it depends on roof condition, shading, and local utility rates. Our assessment will determine if your specific property qualifies.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Does my roof need to be in perfect condition?</div>
+                <div class="faq-answer">Not perfect, but it should have 15+ years of useful life remaining. If your roof needs replacement soon, we can coordinate with roofing contractors — sometimes bundling solar with a new roof creates additional tax benefits.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Who handles maintenance?</div>
+                <div class="faq-answer">Powerstream, our installation partner, provides 25-year performance monitoring and maintenance. Solar panels require minimal upkeep — mainly just occasional cleaning if debris accumulates.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What if I don't own the building?</div>
+                <div class="faq-answer">Property managers and long-term lessees can participate with property owner consent. We'll help structure the agreement so all parties benefit.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">Solar Roof Lease</div>
+            <div class="footer-links">
+                <a href="/sb1019">About SB 1019</a>
+                <a href="/go-green">Go Green</a>
+                <a href="mailto:hello@solarrooflease.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
